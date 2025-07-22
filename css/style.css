@@ -1173,9 +1173,9 @@ h2::after {
   background: none;
   border: none;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  padding: 20px;
+  padding: 6px;
   cursor: pointer;
   transition: background 0.3s;
   display: flex;
@@ -1189,13 +1189,13 @@ h2::after {
 
 .arrow {
   transition: transform 0.3s ease;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .faq-answer {
   display: none;
-  padding: 20px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 18px;
   color: #333;
   text-align: left;
   background: #f9f9f9;
@@ -1936,4 +1936,58 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   transform: translateY(10px);
 }
-  
+
+
+/* Partners CSS */
+
+.partners {
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.slider-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: scrolling 20s linear infinite;
+
+}
+
+@keyframes scrolling {
+
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.slider-items img {
+    width: 12%;
+    margin: 20px;
+
+}
