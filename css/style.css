@@ -1961,4 +1961,83 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   transform: translateY(10px);
 }
-  
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.intro-text {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #e3e3e3; /* match image background */
+    font-family: 'Arial', sans-serif;
+}
+
+.intro-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.intro-text h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.container1 {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container1 {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
