@@ -1,10 +1,12 @@
 /* --- Global Styles & Variables --- */
         :root {
-            --bg-dark: #ffffff;
-            --bg-secondary: #b8c5e4;
-            --text-light: #190264;
-            --text-medium: #0e1428;
-            --neon-blue: #0d00ff; /* Our Neon Accent */
+            --bg-primary: #ffffff;
+            --bg-secondary: #024063;
+            --text-blue: #024063;
+            --text-yellow: #ffea2b;
+            --text-medium: #000000;
+            --neon-blue: #024063; /* Our Neon Accent */
+            --neon-yellow-light: #ffea2b; /* Lighter Neon Accent */
             --font-primary: 'Poppins', ;
             --font-secondary: 'Playfair Display', serif;
         }
@@ -21,8 +23,8 @@
 
         body {
             font-family: var(--font-primary);
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-primary);
+            color: var(--text-blue);
             line-height: 1.6;
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
@@ -36,7 +38,13 @@
         h1, h2, h3 {
             font-family: var(--font-secondary);
             margin-bottom: 1rem;
-            color: var(--text-light);
+            color: var(--text-blue);
+        }
+        
+        .secondary-heading {
+            font-family: var(--font-secondary);
+            color: var(--text-yellow);
+            margin-bottom: 1rem;
         }
 
         h2 {
@@ -72,7 +80,7 @@
         }
 
         a:hover {
-            color: var(--text-light);
+            color: var(--text-blue);
         }
 
         section {
@@ -82,10 +90,15 @@
 
         /* Apply alternating background */
         #about, #portfolio, #contact { /* Sections with dark background */
-             background-color: var(--bg-dark);
+             background-color: var(--bg-primary);
         }
+
+        #eligibility { 
+            background-color: var(--bg-secondary);
+        }
+
         #services { /* Section with secondary background */
-             background-color: var(--bg-secondary);
+             background-color: var(--bg-primary);
         }
 
 
@@ -98,7 +111,7 @@
         .btn {
             display: inline-block;
             background-color: var(--neon-blue);
-            color: var(--bg-dark);
+            color: var(--bg-primary);
             padding: 12px 25px;
             border: none;
             border-radius: 5px;
@@ -107,20 +120,20 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 10px #0026ff80;
+            border: 4px #ffea2b;
         }
 
         .btn:hover {
-            background-color: var(--text-light);
-            color: var(--neon-blue);
+            background-color: #ffea2b;
+            color: #024063;
             transform: translateY(-2px);
-            box-shadow: 0 0 20px var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-yellow-light);
         }
 
         /* --- Header & Navigation --- */
         #main-header {
             background-color: rgb(255, 255, 255); /* Semi-transparent dark */
-            color: var(--text-light);
+            color: var(--text-blue);
             padding: 15px 0;
             position: fixed;
             width: 100%;
@@ -141,7 +154,7 @@
             font-family: var(--font-secondary);
             font-size: 2rem;
             font-weight: bold;
-            color: var(--text-light);
+            color: var(--text-blue);
         }
         #logo span { /* Neon accent on part of the logo */
             color: var(--neon-blue);
@@ -158,7 +171,7 @@
         }
 
         #navbar ul li a {
-            color: var(--text-light);
+            color: var(--text-blue);
             font-weight: bold;
             font-size: 1.5rem;
             padding-bottom: 5px;
@@ -166,8 +179,7 @@
             transition: color 0.3s ease, border-color 0.3s ease;
         }
 
-        #navbar ul li a:hover,
-        #navbar ul li a.active {
+        #navbar ul li a:hover {
             color: var(--neon-blue);
             border-bottom-color: var(--neon-blue);
         }
@@ -177,7 +189,7 @@
             display: none; /* Hidden by default */
             background: none;
             border: none;
-            color: var(--text-light);
+            color: var(--text-blue);
             font-size: 1.5rem;
             cursor: pointer;
         }
@@ -224,9 +236,10 @@
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
          /* Neon effect on H1 */
-        #home h1 span {
+        #home p span {
             color: #fff;
-            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+            font-size: 2rem;
+            text-shadow: 0 0 10px var(--neon-yellow-light), 0 0 20px var(--neon-yellow-light);
         }
 
         #home p {
@@ -254,6 +267,18 @@
             flex: 1;
         }
 
+        #about .about-text p {
+            font-size: 1.5rem;
+            margin: 1rem;
+            color: var(--text-blue);
+        }
+
+        #about .about-text strong {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--neon-blue);
+            
+        }
 
         /* --- Services Section --- */
         #services .services-grid {
@@ -264,7 +289,7 @@
         }
 
         .service-item {
-            background-color: var(--bg-dark); /* Use dark bg for contrast on secondary bg section */
+            background-color: var(--bg-primary); /* Use dark bg for contrast on secondary bg section */
             padding: 30px;
             border-radius: 8px;
             text-align: center;
@@ -293,7 +318,7 @@
             bottom: 20px;
             right: 20px;
             background-color: var(--neon-blue);
-            color: var(--bg-dark);
+            color: var(--bg-primary);
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -330,7 +355,7 @@
         }
 
         .chat-header {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-primary);
             padding: 10px 15px;
             display: flex;
             justify-content: space-between;
@@ -358,7 +383,7 @@
         .chat-body p {
              font-size: 0.9rem;
              margin-bottom: 10px;
-             color: var(--text-light);
+             color: var(--text-blue);
         }
         .chat-footer {
              padding: 10px;
@@ -369,8 +394,8 @@
              padding: 8px;
              border-radius: 5px;
              border: 1px solid #555;
-             background-color: var(--bg-dark);
-             color: var(--text-light);
+             background-color: var(--bg-primary);
+             color: var(--text-blue);
         }
 
         /* --- Responsive Design --- */
@@ -430,25 +455,12 @@
 /* Cards Css */
 
 
-.fill-purple
+.fill
 {
-  background-image: linear-gradient(90deg, #4addff, #a34dfe);
+  background-image: linear-gradient(25deg, #ffea2b, #ffea2b);
+
 }
 
-.fill-green
-{
-  background-image: linear-gradient(90deg,  #000f91e5, #95dafc);
-}
-
-.fill-blue
-{
-  background-image: linear-gradient(90deg,  #000f91e5, #95dafc);
-}
-
-.fill-orange
-{
-  background-image: linear-gradient(90deg,  #000f91e5, #95dafc);
-}
 
 .cards
 {
@@ -467,14 +479,14 @@
   display:flex;
   width: 60vw;
   height: 30vh;
-  border-radius:0.5rem;
+  border-radius: 8rem;
   transform-origin:center center;
   transform:scale(1) translate(0px,0px) perspective( 750px ) rotateY(0deg);
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   transition-duration: 0.5s;
   position:absolute;
   top:0;
-  box-shadow:0 30px 50px rgba(0,0,0,0.1);
+  box-shadow:0 50px 50px #000000;
   z-index:3;
   cursor: pointer;
   overflow:hidden;
@@ -482,8 +494,8 @@
 
 .cards .card h3{
     font-size: 2rem;
-    color:#ffffff;
-    text-shadow: #eaff00 0px 0px 10px;
+    color:#024063;
+    text-shadow: #fff 0px 0px 10px;
     text-align:center;
     margin:0;
 }
