@@ -36,7 +36,7 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 100;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -458,6 +458,8 @@ div.tagline>h2 {
     display: flex;
     align-items: center;
     gap: 40px;
+    width: 80%;
+    border-radius: 50px;
 }
 
 #about .about-image {
@@ -949,9 +951,19 @@ div.tagline>h2 {
 
 
 /* ---------------------------Contact CSS---------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+#contact{
+    background-color: #ffea2b;
+    margin: 0px;
+    height: 10vh;
+}
 
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
 ul {
   list-style: none;
@@ -965,7 +977,7 @@ input {
   position: relative;
   font-size: 30px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   margin: 0 0 35px;
 }
 
@@ -984,13 +996,16 @@ input {
 .contact-ul b {
   font-size: 20px;
   margin: 10px 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--font-primary);
   word-wrap: break-word;
+  color: #000;
 }
 
 .contact-sec .contact-ul i {
-  font-size: 18px;
-  padding: 10px;
+    color: var(--text-blue);
+    border: var(--text-blue) solid 2px;
+    font-size: 18px;
+    padding: 10px;
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -1001,22 +1016,9 @@ input {
 
 .contact-sec .contact-ul li b:hover {
   color: #f93;
+
 }
 
-.contact-sec .contact-ul li .fa-location-dot {
-  color: #f44337;
-  border: 2px solid #f4433790;
-}
-
-.contact-sec .contact-ul li .fa-phone {
-  color: #00b055;
-  border: 2px solid #00b05590;
-}
-
-.contact-sec .contact-ul li .fa-envelope {
-  color: #ff6347;
-  border: 2px solid #ff634790;
-}
 
 .contact-detail span {
   width: 400px;
