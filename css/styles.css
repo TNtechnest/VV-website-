@@ -101,16 +101,12 @@ section {
 }
 
 /* Apply alternating background */
-#about,
-#portfolio,
+#about
 {
 /* Sections with dark background */
 background-color: var(--bg-primary);
 }
 
-#contact {
-    background-color: #ffea2b;
-}
 
 /* ---------------------------FAQ Css------------------------------ */
 
@@ -192,10 +188,6 @@ h1 {
     height: 40vh;
 }
 
-#services {
-    /* Section with secondary background */
-    background-color: var(--bg-primary);
-}
 
 
 img {
@@ -493,40 +485,105 @@ div.tagline>h2 {
 
 }
 
-/* --- Services Section --- */
-#services .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 3rem;
+/* -------------------------- Services Section ------------------------- */
+
+#services{
+    min-height: 100vh;
+  width:100vw;
+ text-aligh: center;
+
+}
+.card-effect {
+    box-shadow: 0 8px 22px #0000001a;
+    background-color:#ffffff;
+    padding: 25px;
+    transition: all 0.35s ease;
+    border-radius: .4rem;
 }
 
-.service-item {
-    background-color: var(--bg-primary);
-    /* Use dark bg for contrast on secondary bg section */
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid #444;
-    /* Slightly visible border */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px var(--neon-blue);
+
+.card-effect:hover > .iconbox i{
+    color: #024063;
 }
 
-.service-item h3 {
-    color: var(--neon-blue);
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #024063;
+    color: white;
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
 }
 
-.service-item p {
-    font-size: 0.95rem;
-    color: var(--text-medium);
+.iconbox i {
+    font-size: 2rem;
+    color: white;
 }
+
+.iconbox i:hover {
+    color: #024063;
+}
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service p{
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-image: linear-gradient(to right top, #ffffff, #ffea2b, #ffea2b, #ffea2b, #ffffff);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: white;
+    color: #024063;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: black;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+
+/* ------------------------Services Section Ends------------------------------- */
+
+
+
+
+
+
+
 
 
 
@@ -848,7 +905,6 @@ div.tagline>h2 {
 }
 
 
-
 .slider {
     margin-top: 0;
     display: flex;
@@ -889,4 +945,146 @@ div.tagline>h2 {
     width: 8%;
     margin: 20px;
 
+}
+
+
+/* ---------------------------Contact CSS---------------------- */
+
+#contact {
+    background-color: #ffea2b;
+}
+
+
+.contact-info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+      margin-bottom: 10px;
+}
+.contact-info-icon {
+margin-bottom: 15px;
+}
+.contact-info-item {
+  background: #071c34;
+  padding: 30px 0px;
+}
+.contact-page-sec .contact-page-form h2 {
+  color: #071c34;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-page-form .col-md-6.col-sm-6.col-xs-12 {
+  padding-left: 0;
+}  
+.contact-page-form.contact-form input {
+  margin-bottom: 5px;
+}  
+.contact-page-form.contact-form textarea {
+  height: 110px;
+}
+.contact-page-form.contact-form input[type="submit"] {
+  background: #071c34;
+  width: 150px;
+  border-color: #071c34;
+}
+.contact-info-icon i {
+  font-size: 48px;
+  color: #fda40b;
+}
+.contact-info-text p{margin-bottom:0px;}
+.contact-info-text h2 {
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact-info-text span {
+  color: #999999;
+  font-size: 16px;
+  font-weight: ;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-page-form input {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #f9f9f9;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.contact-page-form .message-input {
+display: inline-block;
+width: 100%;
+padding-left: 0;
+}
+.single-input-field textarea {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #f9f9f9;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.single-input-fieldsbtn input[type="submit"] {
+  background: #fda40b none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: capitalize;
+  width: 150px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.single-input-fieldsbtn input[type="submit"]:hover{background:#071c34;transition: all 0.4s ease-in-out 0s;border-color:#071c34}
+.single-input-field  h4 {
+  color: #464646;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.contact-page-form {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact-page-map {
+  margin-top: 36px;
+}
+.contact-page-form form {
+    padding: 20px 15px 0;
+}
+
+
+/* -------------------------- Scroll to Top ------------------------------ */
+
+.to-top {
+  background: #024063;
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color: #fff;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+  z-index: 10;
+}
+
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
 }
