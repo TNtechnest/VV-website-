@@ -1208,29 +1208,25 @@ form.contFrm {
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 50px;
-  border-width: 3px;
-  box-shadow: #ffea2b 0px 0px 10px;
-  border-style: solid;
-  border-color: #ffea2b;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
   position: relative;
-  
+  -webkit-transition: all 700ms ease-in;
 }
 
 .panel h3 {
-  color: #fff;
-  font-size: 24px;
+  font-size: 1.7rem;
   position: absolute;
   bottom: 20px;
   left: 20px;
-  margin: 0;
+  margin: 1rem;
   opacity: 0;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: #000 0px 0px 10px;
 }
-
-
 
 .panel.active {
   flex: 5;
