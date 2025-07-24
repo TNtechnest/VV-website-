@@ -492,7 +492,7 @@ div.tagline>h2 {
 #services{
     min-height: 100vh;
   width:100vw;
- text-aligh: center;
+ text-align: center;
 
 }
 .card-effect {
@@ -987,7 +987,7 @@ input {
 }
 
 .contact-sec {
-  align-item: center;
+  align-items: center;
   display: flex;
   background-color: #5cbde466;
 }
@@ -1211,7 +1211,7 @@ form.contFrm {
   flex: 0.5;
   margin: 10px;
   position: relative;
-  -webkit-transition: all 700ms ease-in;
+  
 }
 
 .panel h3 {
