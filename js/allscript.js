@@ -1,3 +1,4 @@
+// ---------------FAQ--------------
 let question = document.querySelectorAll(".question");
 
 question.forEach(question => {
@@ -18,6 +19,7 @@ question.forEach(question => {
 })
 
 
+// -----------------Slide Panel--------------------
 const panels = document.querySelectorAll(".panel")
 
 panels.forEach((panel) => {
