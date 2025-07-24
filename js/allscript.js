@@ -1,3 +1,16 @@
+// ---------------- Scrolling Effect -------------------
+let ticking = false;
+window.addEventListener("scroll", function () {
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+      optimizedScrollFn();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+
 // ---------------FAQ--------------
 let question = document.querySelectorAll(".question");
 

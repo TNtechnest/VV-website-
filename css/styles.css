@@ -24,6 +24,12 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 body {
