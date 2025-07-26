@@ -1717,14 +1717,14 @@ form.contFrm {
 }
 
 
-
-.register-section {
+.register-container {
   position: fixed;
+  bottom: 20px;
   right: 20px;
-  top: 40%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
+  z-index: 999;
 }
 
 .register-btn {
@@ -1733,6 +1733,7 @@ form.contFrm {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .score-bar {
