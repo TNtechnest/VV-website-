@@ -401,6 +401,26 @@ img {
     box-shadow: 0 0 8px var(--neon-yellow-light);
 }
 
+
+/* Responsive */
+@media (max-width: 768px) {
+  #thoughts {
+    padding-top: 60px;
+  }
+
+  #thoughts .secondary-heading {
+    font-size: 22px;
+  }
+
+  #thoughts .card h3 {
+    font-size: 14px;
+  }
+
+  #thoughts .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* ---------- Tagline -------------*/
 .tagline {
     background-color: var(--bg-secondary);
@@ -583,7 +603,14 @@ div.tagline>h2 {
     top: 0;
 }
 
-
+.service.card-effect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Optional: ensures consistent layout */
+  text-align: center;
+}
 /* ------------------------Services Section Ends------------------------------- */
 
 
@@ -704,7 +731,7 @@ div.tagline>h2 {
         /* Position below header */
         left: 0;
         width: 100%;
-        background-color: rgba(26, 26, 26, 0.95);
+        background-color: rgba(231, 231, 231, 0.95);
         /* Slightly more opaque */
         max-height: 0;
         /* Collapsed by default */
@@ -838,8 +865,6 @@ div.tagline>h2 {
 .card__icon {
     width: 30%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -848,14 +873,14 @@ div.tagline>h2 {
 .card__icon:before {
     content: attr(data-icon);
     font-size: 3rem;
-    position: absolute;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    background-color: #024063; /* optional: your theme */
+    color: white;
 }
 
 .card__detail {
@@ -1418,13 +1443,16 @@ form.contFrm {
   margin-bottom: 40px;
 }
 
+/* Grid Layout */
 .awaits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Style all cards */
 .await-card {
   background-color: #fff;
   border-radius: 16px;
@@ -1438,11 +1466,17 @@ form.contFrm {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
+/* Center bottom two cards */
+.await-card.bottom-row {
+  grid-column: 1 / span 3;
+  justify-self: center;
+}
+
+/* Icon circle */
 .icon-circle {
   width: 60px;
   height: 60px;
   background-color: #e3f2ff;
-  color: #004aad;
   font-size: 26px;
   border-radius: 50%;
   margin: 0 auto 15px;
@@ -1451,6 +1485,7 @@ form.contFrm {
   justify-content: center;
 }
 
+/* Card text */
 .await-card p {
   font-size: 16px;
   color: #333;
@@ -1460,7 +1495,7 @@ form.contFrm {
   font-size: 17px;
   color: #555;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 
 /* CTA Section */
@@ -1496,71 +1531,77 @@ form.contFrm {
   background: #e6b800;
 }
 .mindset-section {
-  background-color:  #024063;;
+  background-color: #024063;
   padding: 60px 20px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   margin: 50px 0;
+  display: flex;
+  justify-content: center;
 }
 
+
 .container3 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff2f2;
-  line-height: 1.3;
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
 
 .container3 h1 .highlight {
   color: #2bb6d9;
-  font-weight: 800;
+  font-weight: 900;
   display: inline-block;
 }
 
-.container3 p {
-  font-size: 1.1rem;
-  margin-top: 20px;
-  color: #423e3e;
-}
-.mindset p {
-  font-size: 1.1rem;
-  margin-top: 20px;
-  color: #fff5f5;
-}
+
 .mindset-list {
   list-style: none;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .mindset-list li {
   font-size: 1.1rem;
-  margin: 10px 0;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 14px 20px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
+  gap: 12px;
   justify-content: center;
-  gap: 10px;
-  color: #ffffff;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
 }
 
 .mindset-list li span {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .mindset-list li:hover {
-  transform: scale(1.05);
-  color: #007BFF;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  color: #2bb6d9;
 }
 
 .note {
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 1rem;
   font-style: italic;
-  color: #666;
-  max-width: 600px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Base Section Styling */
 .pricing-section {
   padding: 60px 20px;
@@ -1668,4 +1709,39 @@ form.contFrm {
     flex-direction: column;
     align-items: center;
   }
+}
+
+
+
+.register-section {
+  position: fixed;
+  right: 20px;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.register-btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.score-bar {
+  width: 10px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-fill {
+  width: 100%;
+  height: 0%;
+  background-color: green;
+  transition: height 1s ease-in-out;
 }
