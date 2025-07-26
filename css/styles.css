@@ -207,6 +207,7 @@ img {
 
 .btn {
     display: inline-block;
+    
     background-color: var(--neon-blue);
     color: var(--bg-primary);
     padding: 12px 25px;
@@ -233,7 +234,7 @@ img {
     background-color: rgb(255, 255, 255);
     /* Semi-transparent dark */
     color: var(--text-blue);
-    padding: 15px 0;
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -289,7 +290,7 @@ img {
     color: var(--text-blue);
     font-weight: bold;
     font-size: 1.5rem;
-    padding-bottom: 5px;
+   
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
