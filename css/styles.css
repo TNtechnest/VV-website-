@@ -144,12 +144,14 @@ h1 {
 
 .question {
   font-size: 1.2rem;
-  font-weight: 600;
-  padding: 20px 80px 20px 20px;
+  font-weight: 700;
+  padding: 10px;
+  width: auto;
   position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: var(--text-blue);
 }
 
 .question::after {
@@ -175,6 +177,8 @@ h1 {
   line-height: 1.5rem;
   font-size: 1.1rem;
   font-weight: 500;
+  color: var(--text-medium);
+  font-style: italic;
 }
 
 
@@ -495,7 +499,7 @@ div.tagline>h2 {
 
 /* -------------------------- Services Section ------------------------- */
 
-#services{
+#pioneers{
     min-height: 100vh;
   width:100vw;
  text-align: center;
