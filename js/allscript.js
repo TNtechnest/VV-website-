@@ -16,11 +16,18 @@ window.addEventListener("scroll", function () {
 // ----------------------NavBar-------------------
 const toggleButton = document.getElementById('menu-toggle');
 const navbar = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-link');
 
 toggleButton.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
 
+// Close navbar when any nav link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('active');
+  });
+});
 
 
 // ---------------FAQ--------------
