@@ -71,7 +71,7 @@ h2 {
 }
 
 
-/* Neon underline effect for H2 */
+/* Neon underline effect for H2
 h2::after {
     content: '';
     position: absolute;
@@ -79,10 +79,9 @@ h2::after {
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
-    height: 3px;
+    height: 2px;
     background-color: var(--neon-blue);
-    box-shadow: 0 0 8px var(--neon-blue);
-}
+} */
 
 p {
     color: var(--text-medium);
@@ -117,6 +116,7 @@ background-color: var(--bg-primary);
 /* ---------------------------FAQ Css------------------------------ */
 
 #faq{
+    height: 50vh;
     font-family: var(--font-primary);
     background-color: var(--bg-secondary);
     color: var(--text-medium);
@@ -127,6 +127,10 @@ background-color: var(--bg-primary);
 }
 .wrapper {
   width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -139,7 +143,8 @@ h1 {
   color: black;
   border-radius: 20px;
   box-shadow: 0 5px 10px 0 rgb(0,0,0,0.25);
-  margin: 20px 0;
+  margin: 10px;
+  width: 50vw;
 }
 
 .question {
@@ -251,15 +256,37 @@ img {
 
 /* Default transparent state */
 #main-header.transparent {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
     /* Fully transparent */
     backdrop-filter: none;
 }
+
+#main-header.transparent #logo span{
+    color: var(--text-blue);
+}
+
 
 /* Solid background after scroll */
 #main-header.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
+}
+
+#main-header.scrolled #logo span{
+    color: var(--text-yellow);
+    text-shadow: var(--neon-blue) 0px 0px px;
+}
+
+#main-header.scrolled .register-btn{
+  display: inline;
+  padding: 4px 10px;
+  background-color: var(--neon-yellow-light);
+  color: var(--neon-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 #main-header .container {
@@ -270,14 +297,14 @@ img {
 
 #logo {
     font-family: var(--font-secondary);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    margin: 0;
     color: var(--text-blue);
 }
 
 #logo span {
-    /* Neon accent on part of the logo */
-    color: var(--neon-blue);
+    font-size: 1.5rem;
 }
 
 
@@ -294,8 +321,6 @@ img {
     color: var(--text-blue);
     font-weight: bold;
     font-size: 1.5rem;
-   
-    border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -344,7 +369,7 @@ img {
     width: 100%;
     height: 100%;
     /* Adjust opacity as needed */
-    background-color: #00000039;
+    background-color: #00000016;
     z-index: 1;
 }
 
@@ -936,7 +961,6 @@ div.tagline>h2 {
     justify-content: center;
     text-align: center;
     min-height: 60vh;
-    padding-top: 80px;
     background-color: var(--bg-primary);
     position: relative;
 }
@@ -952,7 +976,7 @@ div.tagline>h2 {
     justify-content: center;
     align-items: center;
     height: 14vh;
-    width: 70vw;
+    width: 50vw;
     overflow: hidden;
     background: rgb(255, 255, 255);
     border-radius: 16px;
@@ -964,7 +988,7 @@ div.tagline>h2 {
 
 .slider-items {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     animation: scrolling 20s linear infinite;
@@ -1315,9 +1339,6 @@ form.contFrm {
 
 
 
-
-
-
 .container2.main {
   padding: 30px;
 }
@@ -1436,29 +1457,47 @@ form.contFrm {
 
 /* Awaits Section */
 .awaits-section {
-  background-color: #f8f9fa;
+  background-color: var(--bg-primary);
   padding: 70px 20px;
   text-align: center;
 }
 
 .awaits-section h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.awaits-section .intro-text {
-  font-size: 18px;
-  color: #444;
-  margin-bottom: 40px;
+.awaits-section p{
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* Grid Layout */
 .awaits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style all cards */
+.awaits-grid > div {
+  flex: 1 1 calc(33.33% - 20px); /* 3 per row minus gap */
+  max-width: calc(33.33% - 20px);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Force only 2 items in second row by stretching last 2 cards */
+@media (min-width: 992px) {
+  .awaits-grid > div:nth-child(4),
+  .awaits-grid > div:nth-child(5) {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
 }
 
 /* Style all cards */
@@ -1468,6 +1507,12 @@ form.contFrm {
   padding: 25px 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Text */
+.await-card p{
+  font-size: 1.2rem;
+  color: var(--text-medium);
 }
 
 .await-card:hover {
@@ -1494,18 +1539,6 @@ form.contFrm {
   justify-content: center;
 }
 
-/* Card text */
-.await-card p {
-  font-size: 16px;
-  color: #333;
-}
-
-.closing-text {
-  font-size: 17px;
-  color: #555;
-  max-width: 700px;
-  margin: 30px auto 0;
-}
 
 /* CTA Section */
 .cta-section {
@@ -1614,26 +1647,15 @@ form.contFrm {
 /* Base Section Styling */
 .pricing-section {
   padding: 60px 20px;
-  background-color: #f4f6f8;
+  background-color: var(--bg-primary);
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Heading Block */
-.section-heading-block {
+.pricing-section p{
+  font-size: 1.4rem;
+  color: var(--text-medium);
+  margin-bottom: 30px;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-heading-block h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.section-heading-block p {
-  font-size: 1rem;
-  color: #666;
-  margin-top: 10px;
 }
 
 /* card3 Container */
@@ -1641,16 +1663,22 @@ form.contFrm {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 30px;
-  max-width: 1000px;
+  width: 60vw;
   margin: 0 auto;
 }
 
 /* card3s */
 .card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
+  height: 50vh;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: var(--neon-yellow-light) solid 4px;
   padding: 30px;
   flex: 1 1 350px;
   min-width: 280px;
@@ -1658,33 +1686,26 @@ form.contFrm {
 }
 
 .card3:hover {
-  transform: translateY(-5px);
+  transform: translateY(-12px);
 }
 
 /* Price card3 */
 .price-card3 h2 {
   font-size: 2.5rem;
-  color: #111;
+  color: var(--text-blue);
   margin-bottom: 10px;
 }
 
 .price-card3 p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.2rem;
+  color: var(--text-medium);
 }
 
 /* Discount card3 */
 .discount-card3 h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 8px;
+  text-align: center;
 }
 
-.discount-card3 p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #555;
-}
 
 /* Discount List */
 .discount-list {
@@ -1695,20 +1716,25 @@ form.contFrm {
 .discount-list li {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 10px 0;
 }
 
 .discount-list .badge {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neon-yellow-light);
+  color: var(--text-blue);
   font-weight: bold;
+  font-size: 1.2rem;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   text-align: center;
   line-height: 30px;
   margin-right: 15px;
+  padding: 4px;
   flex-shrink: 0;
 }
 
@@ -1720,38 +1746,39 @@ form.contFrm {
   }
 }
 
+/*---------- Register Now sticky Btn -----------*/
 
-.register-container {
+/* .register-container {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: flex-end;
+  left: 20px;
   gap: 10px;
-  z-index: 999;
+  z-index: 10;
 }
+
+.register-container .active{
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+} */
+
 
 .register-btn {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  display: none;
 }
 
-.score-bar {
-  width: 10px;
-  height: 100px;
-  background-color: #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
+/*------ Copyright ----------- */
+.Copyright {
+    text-align: center;
+    background-color: var(--neon-yellow-light);
+    position: relative;
 }
 
-.score-fill {
-  width: 100%;
-  height: 0%;
-  background-color: green;
-  transition: height 1s ease-in-out;
+.Copyright p {
+    margin: 0;
+    color: var(--neon-blue);
+    font-size: 0.9rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    padding: 10px;
 }

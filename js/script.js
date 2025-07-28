@@ -143,6 +143,17 @@ window.addEventListener("scroll", () => {
 })
 
 
+// -----------------------------Register  Now Btn------------------------------------
+const rbtn = document.querySelector(".register-container");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+
 
 
 // ----------------------------------review slider---------------------------------------
