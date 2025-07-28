@@ -337,6 +337,7 @@ img {
   display: none;
   /* Hidden by default */
   background: none;
+  margin-right: 6px;
   border: none;
   color: var(--text-blue);
   font-size: 1.5rem;
