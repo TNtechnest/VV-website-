@@ -100,7 +100,7 @@ a:hover {
 }
 
 section {
-  padding: 60px 0;
+  padding: 20px 0;
   min-height: 80vh;
   /* Ensure sections take up space */
 }
@@ -1436,7 +1436,7 @@ form.contFrm {
 }
 
 
-/* Awaits Section */
+/* ----------------------- Awaits Section ---------------------------------- */
 .awaits-section {
   background-color: var(--bg-primary);
   padding: 70px 20px;
@@ -1512,7 +1512,14 @@ form.contFrm {
   justify-self: center;
 }
 
-/* Icon circle */
+@media (max-width: 768px) {
+  .awaits-grid > div {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/*-------------------- Icon circle ------------------*/
 .icon-circle {
   width: 60px;
   height: 60px;
