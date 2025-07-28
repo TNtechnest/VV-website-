@@ -326,7 +326,7 @@ img {
 }
 
 #navbar.active {
-  background-color: #ffea2b00; /* dark ocean blue with transparency */
+  background-color: #fff; /* dark ocean blue with transparency */
   backdrop-filter: blur(2px); /* optional: smooth glassy effect */
 }
 
@@ -346,7 +346,6 @@ img {
 
 #menu-toggle ul {
   display: block;
-  background-color: #ff0000;
   /* Show when active */
 }
 
