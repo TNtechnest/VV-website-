@@ -483,7 +483,7 @@ div.tagline>h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(60, 0, 255, 0.3);
-  height: 68vh;
+  height: 65vh;
 }
 
 #about .about-text {
@@ -516,11 +516,8 @@ div.tagline>h2 {
   #about .register-button {
     text-align: center;
   }
-  #about .about-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  #about .container img {
+    height: 50vh;
   }
 }
 /* ----------------------------Thoughts Cards Css--------------------------- */
