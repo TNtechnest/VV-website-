@@ -213,7 +213,6 @@ img {
 
 .btn {
   display: inline-block;
-
   background-color: var(--neon-blue);
   color: var(--bg-primary);
   padding: 12px 25px;
@@ -326,6 +325,13 @@ img {
   border-bottom-color: var(--neon-blue);
 }
 
+#navbar.active {
+  background-color: #ffea2b00; /* dark ocean blue with transparency */
+  backdrop-filter: blur(2px); /* optional: smooth glassy effect */
+}
+
+
+
 /* Mobile Nav Toggle - basic styling */
 #menu-toggle {
   display: none;
@@ -335,6 +341,12 @@ img {
   color: var(--text-blue);
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+#menu-toggle ul {
+  display: block;
+  background-color: #ff0000;
+  /* Show when active */
 }
 
 /* --- Hero Section (#home) --- */
@@ -467,20 +479,24 @@ div.tagline>h2 {
   border-radius: 50px;
 }
 
-#about .about-image {
-  flex: 1;
-  max-width: 35%;
+#about .container img {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(60, 0, 255, 0.3);
+  height: 68vh;
 }
 
 #about .about-text {
   flex: 1;
 }
 
+#about .about-text h2 {
+  text-align: left;
+}
+
 #about .about-text p {
-  font-size: 1.3rem;
+  text-align: justify;
+  font-size: auto;
   margin-bottom: 1rem;
   color: var(--text-blue);
 }
@@ -492,7 +508,21 @@ div.tagline>h2 {
 
 }
 
-
+#about .register-button {
+  margin-top: 20px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  #about .register-button {
+    text-align: center;
+  }
+  #about .about-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /* ----------------------------Thoughts Cards Css--------------------------- */
 
 .thoughts {
@@ -799,6 +829,7 @@ div.tagline>h2 {
   #about .about-image {
     max-width: 70%;
     margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   #portfolio .portfolio-grid {
@@ -1423,8 +1454,11 @@ form.contFrm {
 }
 
 .awaits-section p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
+  margin-top: 6px;
+  color: var(--text-blue);
+  font-weight: 500;
 }
 
 /* Grid Layout */
@@ -1475,7 +1509,7 @@ form.contFrm {
 
 .await-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px #023f635b;
 }
 
 /* Center bottom two cards */
@@ -1704,22 +1738,6 @@ form.contFrm {
     align-items: center;
   }
 }
-
-/*---------- Register Now sticky Btn -----------*/
-
-/* .register-container {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  gap: 10px;
-  z-index: 10;
-}
-
-.register-container .active{
-  bottom:32px;
-  pointer-events: auto;
-  opacity:1;
-} */
 
 
 .register-btn {
