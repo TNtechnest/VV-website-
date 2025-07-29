@@ -287,6 +287,13 @@ img {
   font-size: 1.5rem;
 }
 
+#main-header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #navbar ul {
   list-style: none;
   display: flex;
@@ -359,14 +366,15 @@ img {
   #menu-toggle {
     display: inline;
     align-self: flex-end;
+    margin-top: 10px;
     margin-right: 10px;
   }
 
   #main-header .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
