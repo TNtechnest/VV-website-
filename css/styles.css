@@ -197,13 +197,6 @@ h1 {
 }
 
 
-.eligibility {
-  background-color: var(--bg-secondary);
-  width: 100vw;
-  height: 40vh;
-}
-
-
 
 img {
   max-width: 100%;
@@ -214,16 +207,14 @@ img {
 .btn {
   display: inline-block;
   background-color: var(--neon-blue);
-  color: var(--bg-primary);
+  color: var(--text-yellow);
   padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: var(--font-primary);
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  border: 4px #ffea2b;
   margin-bottom: 1rem;
 }
 
@@ -279,7 +270,7 @@ img {
   background-color: var(--neon-yellow-light);
   color: var(--neon-blue);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 700;
@@ -476,13 +467,12 @@ div.tagline>h2 {
   align-items: center;
   gap: 40px;
   width: 80%;
-  border-radius: 50px;
 }
 
 #about .container img {
-  border-radius: 10px;
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(60, 0, 255, 0.3);
+  box-shadow: 0 0 15px #023f634d;
   height: 62vh;
 }
 
@@ -522,6 +512,11 @@ div.tagline>h2 {
 }
 /* ----------------------------Thoughts Cards Css--------------------------- */
 
+#thoughts {
+  background-color: var(--bg-secondary);
+}
+
+
 .thoughts {
   margin-top: -80px;
 }
@@ -529,7 +524,7 @@ div.tagline>h2 {
 .thoughts .item {
   padding: 35px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: #fff;
   text-align: center;
 }
@@ -571,7 +566,7 @@ div.tagline>h2 {
   background-color: #ffffff;
   padding: 25px;
   transition: all 0.35s ease;
-  border-radius: .4rem;
+  border-radius: 30px;
 }
 
 .card-effect:hover {
@@ -657,252 +652,9 @@ div.tagline>h2 {
   text-align: center;
 }
 
-/* ------------------------Services Section Ends------------------------------- */
-
-
-
-
-
-
-
-
-
-
-/* --- Live Chat Widget (Simulated) --- */
-#chat-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--neon-blue);
-  color: var(--bg-primary);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  /* Icon size */
-  cursor: pointer;
-  z-index: 1050;
-  box-shadow: 0 0 15px var(--neon-blue);
-  transition: transform 0.3s ease;
-}
-
-#chat-widget:hover {
-  transform: scale(1.1);
-}
-
-#chat-popup {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  bottom: 90px;
-  /* Above widget */
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--neon-blue);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  z-index: 1040;
-  overflow: hidden;
-  flex-direction: column;
-}
-
-#chat-popup.active {
-  display: flex;
-}
-
-.chat-header {
-  background-color: var(--bg-primary);
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--neon-blue);
-}
-
-.chat-header h4 {
-  margin: 0;
-  font-size: 1rem;
-  font-family: var(--font-primary);
-  color: var(--neon-blue);
-}
-
-#chat-close {
-  background: none;
-  border: none;
-  color: var(--text-medium);
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.chat-body {
-  padding: 15px;
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-.chat-body p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: var(--text-blue);
-}
-
-.chat-footer {
-  padding: 10px;
-  border-top: 1px solid #444;
-}
-
-.chat-footer input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #555;
-  background-color: var(--bg-primary);
-  color: var(--text-blue);
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
-  #logo {
-    font-size: 1.5rem;
-  }
-
-  #navbar {
-    position: absolute;
-    top: 100%;
-    /* Position below header */
-    left: 0;
-    width: 100%;
-    background-color: rgba(231, 231, 231, 0.95);
-    /* Slightly more opaque */
-    max-height: 0;
-    /* Collapsed by default */
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-  }
-
-  #navbar.active {
-    max-height: 300px;
-    /* Height when open */
-  }
-
-  #navbar ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-  }
-
-  #navbar ul li {
-    margin: 10px 0;
-    margin-left: 0;
-  }
-
-  #menu-toggle {
-    display: block;
-    /* Show hamburger */
-  }
-
-  #home h1 {
-    font-size: 2.8rem;
-  }
-
-  #home p {
-    font-size: 1.1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  #about .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #about .about-image {
-    max-width: 70%;
-    margin-bottom: 20px;
-    margin-right: 0px;
-  }
-
-  #portfolio .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* Smaller items on mobile */
-    gap: 10px;
-  }
-
-  #chat-popup {
-    width: calc(100% - 40px);
-    /* More width on mobile */
-  }
-}
 
 
 /* ---------------------------Partners Section CSS--------------------------- */
-
-/* 
-.partners {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 60vh;
-    background-color: var(--bg-primary);
-    position: relative;
-}
-
-.partners h2 {
-    font-size: 3rem;
-}
-
-
-.slider {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 14vh;
-    width: 50vw;
-    overflow: hidden;
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.4px);
-    -webkit-backdrop-filter: blur(7.4px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.slider-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    animation: scrolling 20s linear infinite;
-
-}
-
-@keyframes scrolling {
-
-    0% {
-        transform: translateX(80%);
-    }
-
-    100% {
-        transform: translateX(-20%);
-    }
-}
-
-.slider-items img {
-    width: 8%;
-    margin: 20px;
-
-}
- */
 
 .partners .container {
   height: fit-content;
@@ -966,238 +718,6 @@ div.tagline>h2 {
     padding: 20px 30px;
   }
 }
-
-
-
-/* ---------------------------Contact CSS---------------------- */
-
-#contact {
-  background-color: #ffea2b;
-  margin: 0px;
-  height: 10vh;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-ul {
-  list-style: none;
-}
-
-input {
-  overflow: hidden;
-}
-
-.section-title {
-  position: relative;
-  font-size: 30px;
-  font-weight: 600;
-  font-family: var(--font-primary);
-  margin: 0 0 35px;
-}
-
-.sec-pad {
-  padding: 60px 0 0;
-  margin: 50px 0;
-}
-
-.contact-sec {
-  align-items: center;
-  display: flex;
-  background-color: #5cbde466;
-}
-
-.contact-sec .contact-ul li,
-.contact-ul b {
-  font-size: 20px;
-  margin: 10px 0;
-  font-family: var(--font-primary);
-  word-wrap: break-word;
-  color: #000;
-}
-
-.contact-sec .contact-ul i {
-  color: var(--text-blue);
-  border: var(--text-blue) solid 2px;
-  font-size: 18px;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.contact-detail a {
-  color: #000;
-  text-decoration: none;
-}
-
-.contact-sec .contact-ul li b:hover {
-  color: #f93;
-
-}
-
-
-.contact-detail span {
-  width: 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-detail span a {
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #000;
-  border-radius: 50%;
-  margin: 0px 5px;
-}
-
-.contact-detail span .fb {
-  color: #3b5998;
-  border: 3px solid #3b5998;
-}
-
-.contact-detail span .fb:hover {
-  color: #fff;
-  background-color: #3b5998;
-}
-
-.contact-detail span .insta {
-  color: #833ab4;
-  border: 3px solid #833ab4;
-}
-
-.contact-detail span .insta:hover {
-  color: #fff;
-  background-color: #833ab4;
-}
-
-.contact-detail span .twitter {
-  color: #00acee;
-  border: 3px solid #00acee;
-}
-
-.contact-detail span .twitter:hover {
-  color: #fff;
-  background-color: #00acee;
-}
-
-form.contFrm {
-  max-width: 396px;
-  margin: auto;
-}
-
-.inptFld {
-  width: 100%;
-  height: 50px;
-  border: 0;
-  margin: 0 0 10px;
-  border-radius: 8px;
-  padding: 0 20px;
-  font-size: 16px;
-  color: #000;
-}
-
-.inptFld:focus {
-  outline-offset: -4px;
-  outline: 1px solid #f93;
-}
-
-.contFrm textarea {
-  height: 75px;
-  padding-top: 5px;
-}
-
-.inptBtn {
-  height: 50px;
-  border: 0;
-  background: #00b055;
-  font-size: 14px;
-  color: #fff;
-  margin: auto;
-  letter-spacing: 1px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 200px;
-}
-
-/* Responcive css Start */
-
-@media (max-width: 991px) {
-  .sec-pad {
-    padding: 20px 0 0px;
-  }
-
-  .contact-sec .contact-ul li,
-  .contact-ul b {
-    font-size: 18px;
-  }
-
-  .contact-sec .contact-ul i {
-    font-size: 14px;
-    padding: 6px;
-    margin-right: 6px;
-  }
-
-  .inptFld {
-    height: 40px;
-    margin: 0 0 10px;
-    padding: 0 14px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767px) {
-  .contact-detail span {
-    width: auto;
-  }
-
-  .contact-detail span a {
-    font-size: 18px;
-    padding: 5px 10px;
-    color: #000;
-    border-radius: 50%;
-    margin: 0px 5px 20px;
-  }
-}
-
-@media (max-width: 575px) {
-  .section-title {
-    font-size: 26px;
-    font-weight: 500;
-  }
-
-  .contact-sec {
-    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
-  }
-
-  .contact-sec .contact-ul i {
-    border: none;
-  }
-
-  .inptFld {
-    height: 36px;
-    margin: 0 0 8px;
-    padding: 0 14px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .contact-sec .contact-ul li,
-  .contact-ul b {
-    font-size: 16px;
-  }
-}
-
-
-/* -------------------------------Mentors--------------------------------- */
-
-
-
 
 
 
@@ -1270,7 +790,6 @@ form.contFrm {
   
 }
 
-/* -------------------------------Panel CSS Ends---------------------- */
 
 
 /* -------------------------- Scroll to Top ------------------------------ */
@@ -1300,9 +819,6 @@ form.contFrm {
   pointer-events: auto;
   opacity: 1;
 }
-
-
-
 
 .container2.main {
   padding: 30px;
@@ -1427,7 +943,7 @@ form.contFrm {
 }
 
 
-
+/* ----------------------- Awaits Section ---------------------------------- */
 .container3 {
   max-width: 1100px;
   margin: auto;
@@ -1435,8 +951,6 @@ form.contFrm {
   font-family: 'Segoe UI', sans-serif;
 }
 
-
-/* ----------------------- Awaits Section ---------------------------------- */
 .awaits-section {
   background-color: var(--bg-primary);
   padding: 70px 20px;
@@ -1471,7 +985,7 @@ form.contFrm {
   max-width: calc(33.33% - 20px);
   background: #fff;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 25px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: left;
 }
@@ -1489,7 +1003,6 @@ form.contFrm {
 /* Style all cards */
 .await-card {
   background-color: #fff;
-  border-radius: 16px;
   padding: 25px 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -1519,13 +1032,14 @@ form.contFrm {
   }
 }
 
-/*-------------------- Icon circle ------------------*/
+/*--------------------Awaits Icon ------------------*/
 .icon-circle {
   width: 60px;
   height: 60px;
-  background-color: #e3f2ff;
+  background-color: #024063;
+  color: var(--text-yellow);
   font-size: 26px;
-  border-radius: 50%;
+  border-radius: 100px;
   margin: 0 auto 15px;
   display: flex;
   align-items: center;
@@ -1533,112 +1047,7 @@ form.contFrm {
 }
 
 
-/* CTA Section */
-.cta-section {
-  background-color: #004aad;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.cta-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.cta-section p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-.cta-button {
-  background: #ffcc00;
-  color: #000;
-  padding: 14px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  transition: background 0.3s;
-}
-
-.cta-button:hover {
-  background: #e6b800;
-}
-
-.mindset-section {
-  background-color: #024063;
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-  margin: 50px 0;
-  display: flex;
-  justify-content: center;
-}
-
-
-.container3 h1 {
-  font-size: 2.7rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-
-.container3 h1 .highlight {
-  color: #2bb6d9;
-  font-weight: 900;
-  display: inline-block;
-}
-
-
-.mindset-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.mindset-list li {
-  font-size: 1.1rem;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.08);
-  padding: 14px 20px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
-  text-align: left;
-}
-
-.mindset-list li span {
-  font-size: 1.4rem;
-}
-
-.mindset-list li:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-  color: #2bb6d9;
-}
-
-.note {
-  margin-top: 50px;
-  font-size: 1rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Base Section Styling */
+/* ------------------- Princing Section ------------------ */
 .pricing-section {
   padding: 60px 20px;
   background-color: var(--bg-primary);
@@ -1652,7 +1061,6 @@ form.contFrm {
   text-align: center;
 }
 
-/* card3 Container */
 .card3-container {
   display: flex;
   flex-wrap: wrap;
@@ -1663,7 +1071,6 @@ form.contFrm {
   margin: 0 auto;
 }
 
-/* card3s */
 .card3 {
   display: flex;
   flex-direction: column;
@@ -1683,7 +1090,6 @@ form.contFrm {
   transform: translateY(-12px);
 }
 
-/* Price card3 */
 .price-card3 h2 {
   font-size: 2.5rem;
   color: var(--text-blue);
@@ -1695,13 +1101,10 @@ form.contFrm {
   color: var(--text-medium);
 }
 
-/* Discount card3 */
 .discount-card3 h3 {
   text-align: center;
 }
 
-
-/* Discount List */
 .discount-list {
   list-style: none;
   padding: 0;
@@ -1739,7 +1142,6 @@ form.contFrm {
     align-items: center;
   }
 }
-
 
 .register-btn {
   display: none;
