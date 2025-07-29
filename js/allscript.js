@@ -12,6 +12,23 @@ window.addEventListener("scroll", function () {
 
 // sticky btn
 
+// --------------------Nav Bar---------------------------
+window.addEventListener('scroll', function () {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 50) {
+            header.classList.remove('transparent');
+            header.classList.add('scrolled');
+        } else {
+            header.classList.add('transparent');
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // On page load, make sure the transparent class is applied
+    window.addEventListener('load', function () {
+        const header = document.getElementById('main-header');
+        header.classList.add('transparent');
+    });
 
 // ----------------------NavBar-------------------
 const toggleButton = document.getElementById('menu-toggle');
@@ -66,3 +83,28 @@ function removeActiveClasses() {
     panel.classList.remove("active")
   })
 }
+
+
+// -----------------------------to top scroller------------------------------------
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+
+
+// -----------------------------Register  Now Btn------------------------------------
+const rbtn = document.querySelector(".register-container");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+

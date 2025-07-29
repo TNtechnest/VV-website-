@@ -228,7 +228,6 @@ img {
 /* --- Header & Navigation --- */
 #main-header {
   background-color: rgb(255, 255, 255);
-  /* Semi-transparent dark */
   color: var(--text-blue);
   padding: 10px 20px;
   position: fixed;
@@ -237,8 +236,8 @@ img {
   left: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
-  backdrop-filter: blur(5px);
-  /* Frosted glass effect */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+ 
 }
 
 /* Default transparent state */
@@ -276,12 +275,6 @@ img {
   font-weight: 700;
 }
 
-#main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #logo {
   font-family: var(--font-secondary);
   font-size: 1.8rem;
@@ -293,7 +286,6 @@ img {
 #logo span {
   font-size: 1.5rem;
 }
-
 
 #navbar ul {
   list-style: none;
@@ -329,15 +321,53 @@ img {
   /* Hidden by default */
   background: none;
   margin-right: 6px;
+  margin-left: auto;
   border: none;
   color: var(--text-blue);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
 #menu-toggle ul {
   display: block;
   /* Show when active */
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 999;
+  }
+
+  #navbar.active {
+    display: block;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #menu-toggle {
+    display: inline;
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  #main-header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  }
 }
 
 /* --- Hero Section (#home) --- */
