@@ -47,6 +47,9 @@ navLinks.forEach(link => {
 });
 
 
+// ---------------- Explore ------------------
+
+
 // ---------------FAQ--------------
 let question = document.querySelectorAll(".question");
 

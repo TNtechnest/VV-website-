@@ -449,25 +449,27 @@ img {
 /* ---------- Tagline -------------*/
 .tagline {
   background-color: var(--bg-secondary);
-  height: auto;
-  padding: 2rem;
-  margin: 1rem 2rem 2rem 1rem;
+  height: fit-content;
+  width: 100%;
+  max-width: fit-content;
+  padding:1rem;
+  margin: auto;
+  margin-top: 2rem;
   font-size: 2.5rem;
-  text-align: center;
-  border-top-right-radius: 100px;
-  border-top-left-radius: 80px;
-  border-bottom-right-radius: 100px;
+  text-align: left;
+  border-radius: 30px;
 }
 
 .tagline h1 {
-  font-size: 1.8rem;
-  padding-top: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .tagline span {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.8rem;
+  color: var(--text-yellow);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 
@@ -505,6 +507,11 @@ div.tagline>h2 {
 
 
 /* ----------------- About Section --------------------- */
+
+#about {
+  margin-top: 2rem;
+}
+
 #about .container {
   display: flex;
   align-items: center;
@@ -620,7 +627,6 @@ div.tagline>h2 {
 }
 
 
-
 /* -------------------------- Services Section ------------------------- */
 
 #pioneers {
@@ -729,6 +735,80 @@ div.tagline>h2 {
 
 
 
+/* -------------------------------Visual Map Experience--------------------------------- */
+
+#visualmaps {
+  background-color: #024063;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#visualmaps h2 {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.container1 {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+  transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 1.7rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 1rem;
+  opacity: 0;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: #000 0px 0px 10px;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+
+}
+
+
+/* ---------------------------Explore Section CSS--------------------------- */ */
+
+
+
+
 /* ---------------------------Partners Section CSS--------------------------- */
 
 .partners .container {
@@ -796,77 +876,6 @@ div.tagline>h2 {
     align-items: center;
     padding: 20px 30px;
   }
-}
-
-
-
-
-/* -------------------------------Visual Map Experience--------------------------------- */
-
-#visualmaps {
-  background-color: #024063;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#visualmaps h2 {
-  color: #fff;
-  font-family: var(--font-primary);
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.container1 {
-  display: flex;
-  width: 90vw;
-}
-
-.panel {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  -webkit-transition: all 700ms ease-in;
-  transition: all 700ms ease-in;
-}
-
-.panel h3 {
-  font-size: 1.7rem;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 1rem;
-  opacity: 0;
-  color: #fff;
-  font-weight: 600;
-  text-shadow: #000 0px 0px 10px;
-}
-
-.panel.active {
-  flex: 5;
-}
-
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
-
-
 }
 
 
