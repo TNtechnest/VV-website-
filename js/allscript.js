@@ -10,7 +10,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// sticky btn
 
 // --------------------Nav Bar---------------------------
 window.addEventListener('scroll', function () {
@@ -47,7 +46,6 @@ navLinks.forEach(link => {
 });
 
 
-// ---------------- Explore ------------------
 
 
 // ---------------FAQ--------------
