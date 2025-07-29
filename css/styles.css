@@ -706,6 +706,10 @@ div.tagline>h2 {
 }
 
 .partners.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   padding: 30px 20px;
   height: fit-content;
   margin: 6px;
