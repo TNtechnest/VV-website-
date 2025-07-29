@@ -138,39 +138,23 @@
 
   <!-- ---------------- Section - 3 ----------------- -->
   <!-- Thoughts Cards Section -->
-  <section id="thoughts">
-    <div class="thoughts">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="item">
-              <h4>Free Storage</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="item">
-              <h4>Free Storage</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="item">
-              <h4>Free Storage</h4>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div id="thoughts">
+    <h2>If You’ve Ever Thought...</h2>
+    <div class="thoughts-container">
+      <div class="item" data-aos="flip-down" data-aos-duration="2000">“I want to move beyond quick fixes and shape lasting change.”</div>
+      <div class="item" data-aos="flip-down" data-aos-duration="2000"> “I need space to step back, reflect, and sharpen my approach.”</div>
+      <div class="item" data-aos="flip-down" data-aos-duration="2000">“I want to meet others who are also building, not just talking.”</div>
     </div>
-  </section>
+    <a href="#awaits" class="btn">Then, you will feel at home here.</a>
+  </div>
 
 
   <!-- ---------------- Section - 4 ----------------- -->
   <!-- Pioneers Section  -->
   <section id="pioneers">
-    <div class="service-container container">
-      <h2> Who’s This Space For? </h2>
-    </div>
     <div class="container">
-      <div class="row g-5">
+      <h2> Who’s This Space For? </h2>
+      <div class="row g-5 service-container">
         <div class="col-lg-4 col-sm-6">
           <div class="service card-effect bounceInUp">
             <div class="iconbox">
@@ -242,7 +226,6 @@
           </div>
         </div>
 
-
       </div>
     </div>
   </section>
@@ -273,7 +256,7 @@
 
   <!-- --------------------- Section - 6 ---------------------- -->
   <!-- Section: What Awaits -->
-  <section class="awaits-section">
+  <section id="awaits" class="awaits-section">
     <div class="container3">
       <h2>What awaits you?</h2>
       <p>More than a conclave, it’s a space to...</p>
@@ -304,6 +287,10 @@
       <p>
         Leave with new perspectives, meaningful relationships, and tools to take your work to the next level.
       </p>
+      
+      <div class="register-button">
+        <a href="/form.html" class="btn">Register Now</a>
+      </div>
     </div>
   </section>
 
@@ -625,9 +612,7 @@
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1200,
-    });
+    AOS.init();
   </script>
 
 

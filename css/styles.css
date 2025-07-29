@@ -53,6 +53,7 @@ h3 {
   font-family: var(--font-secondary);
   margin-bottom: 1rem;
   color: var(--text-blue);
+  font-weight: 600;
 }
 
 .secondary-heading {
@@ -236,8 +237,9 @@ img {
   left: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
-  backdrop-filter: blur(5px); /* Frosted glass effect */
- 
+  backdrop-filter: blur(5px);
+  /* Frosted glass effect */
+
 }
 
 /* Default transparent state */
@@ -256,6 +258,7 @@ img {
 #main-header.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(5px);
+  box-shadow: 0 6px 10px -3px #024063;
 }
 
 #main-header.scrolled #logo span {
@@ -316,8 +319,10 @@ img {
 }
 
 #navbar.active {
-  background-color: #fff; /* dark ocean blue with transparency */
-  backdrop-filter: blur(2px); /* optional: smooth glassy effect */
+  background-color: #fff;
+  /* dark ocean blue with transparency */
+  backdrop-filter: blur(2px);
+  /* optional: smooth glassy effect */
 }
 
 
@@ -540,63 +545,94 @@ div.tagline>h2 {
   margin-top: 20px;
   text-align: left;
 }
+
 @media (max-width: 768px) {
   #about .register-button {
     text-align: center;
   }
+
   #about .container img {
     height: 50vh;
   }
 }
+
 /* ----------------------------Thoughts Cards Css--------------------------- */
 
 #thoughts {
-  background-color: var(--bg-secondary);
-}
-
-
-.thoughts {
-  margin-top: -80px;
-}
-
-.thoughts .item {
-  padding: 35px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 30px;
-  background-color: #fff;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 
-.thoughts .item h4 {
-  font-size: 17px;
-  margin-top: 25px;
+.thoughts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (max-width: 992px) {
-  .thoughts .item {
-    margin-bottom: 30px;
+.thoughts-container .item {
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 30px;
+  background: var(--bg-secondary);
+  border: #ffea2b solid 4px;
+  box-shadow: #ffea2b 0px 0px 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.thoughts-container .item:hover {
+  text-shadow: #ffea2b 0px 0px 20px;
+  cursor: pointer;
+}
+
+#thoughts .btn {
+  margin-top: 3rem;
+  color: #024063;
+  background-color: var(--bg-primary);
+  border: #024063 solid 4px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+
+  .thoughts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
   }
+
+  .thoughts-container .item {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+
 }
-
-
-
 
 
 
 /* -------------------------- Services Section ------------------------- */
 
 #pioneers {
+  background-color: var(--bg-secondary);
   min-height: 100vh;
   width: 100vw;
   text-align: center;
-  margin: 20px;
 }
 
-.service-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+#pioneers .container h2 {
+  color: #fff;
+  margin-top: 1rem;
 }
 
 .card-effect {
@@ -639,6 +675,7 @@ div.tagline>h2 {
 .iconbox i:hover {
   color: #024063;
 }
+
 
 .service {
   position: relative;
@@ -829,7 +866,7 @@ div.tagline>h2 {
     width: 100vw;
   }
 
-  
+
 }
 
 
@@ -931,7 +968,6 @@ div.tagline>h2 {
 
 .info .social::before {
   content: '\f0d7';
-  font-family: 'FontAwesome';
   font-size: 40px;
   color: #7e57c2;
   position: absolute;
@@ -990,7 +1026,12 @@ div.tagline>h2 {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
-  font-family: 'Segoe UI', sans-serif;
+}
+
+#awaits .container3 .register-button{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .awaits-section {
@@ -1068,7 +1109,7 @@ div.tagline>h2 {
 }
 
 @media (max-width: 768px) {
-  .awaits-grid > div {
+  .awaits-grid>div {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
@@ -1093,7 +1134,6 @@ div.tagline>h2 {
 .pricing-section {
   padding: 60px 20px;
   background-color: var(--bg-primary);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .pricing-section p {
