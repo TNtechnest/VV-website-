@@ -28,7 +28,7 @@
 
   <!-- custom css file link  -->
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/explore.css">
+  <link rel="stylesheet" href="css/slides.scss">
 
   <!-- Custom Owl carousel link -->
   <link rel="stylesheet" href="/css/styles.scss">
@@ -86,10 +86,23 @@
   </section>
 
   <!------------------- Tag Lines ------------------------>
-  <!-- <div class="tagline" data-aos="slide-right" data-aos-duration="1000">
-    <h1>Fix a Fishing Net. See How Everything Connects. <br><span>What holds a net together holds a system together too.</span></h1>
-  </div> -->
-  
+  <div id="taglines">
+     <div class="taglines" data-aos="flip-down" data-aos-duration="1000">
+    <div class="tagline tagline-1">
+      <h1>Fix a fishing net. See how everything connects.</h1>
+      <h2>What holds a net together holds a system together too.</h2>
+    </div>
+    <div class="tagline tagline-2">
+      <h1>Get hands-deep in clay. Get head-deep in ideas.</h1>
+      <h2>Journey through villages. Design the future.</h2>
+    </div>
+    <div class="tagline tagline-3">
+      <h1>The beach is your classroom. The sea, your case study.</h1>
+      <h2>Learn from tides, people, and places.</h2>
+    </div>
+  </div>
+  </div>
+ 
 
   <!-- ---------------- Section - 2 ----------------- -->
   <!-- Educational Mile  -->
@@ -317,6 +330,68 @@
         <h3>Listen to the Indigenous</h3>
       </div>
     </div>
+
+    <div class="wrapper d-none">
+      <input checked type=radio name="slider" id="slide1" />
+      <input type=radio name="slider" id="slide2" />
+      <input type=radio name="slider" id="slide3" />
+      <input type=radio name="slider" id="slide4" />
+      <input type=radio name="slider" id="slide5" />
+
+      <div class="slider-wrapper">
+        <div class=inner>
+          <article>
+            <div class="info top-left">
+              <h3>Malacca</h3></div>
+            <img src="https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg" />
+          </article>
+
+          <article>
+            <div class="info bottom-right">
+              <h3>Cameron Highland</h3></div>
+            <img src="https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg" />
+          </article>
+
+          <article>
+            <div class="info bottom-left">
+              <h3>New Delhi</h3></div>
+            <img src="https://farm8.staticflickr.com/7455/27879053992_ef3f41c4a0_h_d.jpg" />
+          </article>
+
+          <article>
+            <div class="info top-right">
+              <h3>Ladakh</h3></div>
+            <img src="https://farm8.staticflickr.com/7367/27980898905_72d106e501_h_d.jpg" />
+          </article>
+
+          <article>
+            <div class="info bottom-left">
+              <h3>Nubra Valley</h3></div>
+            <img src="https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg" />
+          </article>
+        </div>
+        <!-- .inner -->
+      </div>
+      <!-- .slider-wrapper -->
+
+      <div class="slider-prev-next-control">
+        <label for=slide1></label>
+        <label for=slide2></label>
+        <label for=slide3></label>
+        <label for=slide4></label>
+        <label for=slide5></label>
+      </div>
+      <!-- .slider-prev-next-control -->
+
+      <div class="slider-dot-control">
+        <label for=slide1></label>
+        <label for=slide2></label>
+        <label for=slide3></label>
+        <label for=slide4></label>
+        <label for=slide5></label>
+      </div>
+      <!-- .slider-dot-control -->
+    </div>
   </section>
 
 
@@ -480,31 +555,6 @@
 
 
   <!-- ---------------- Section - 10 ----------------- -->
-  <!-- Partners section  -->
-  <div class="partners container">
-    <h2>Our Partners</h2>
-    <div class="partners flex">
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/DEEP.png" alt="DEEP Logo">
-
-        </div>
-      </div>
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/tn.png" alt="TN logo">
-        </div>
-      </div>
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/shikshagraha.png" alt="Shikshagraha Logo">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ---------------------- Section - 11 ------------------------- -->
   <!--Pricing Section-->
   <section class="pricing-section">
     <h2>Pricing & Offers</h2>
@@ -529,6 +579,31 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ---------------------- Section - 11 ------------------------- -->
+  <!-- Partners section  -->
+  <div class="partners container">
+    <h2>Our Partners</h2>
+    <div class="partners flex">
+      <div class="partners item">
+        <div class="img_wraper">
+          <img src="/images/DEEP.png" alt="DEEP Logo">
+
+        </div>
+      </div>
+      <div class="partners item">
+        <div class="img_wraper">
+          <img src="/images/tn.png" alt="TN logo">
+        </div>
+      </div>
+      <div class="partners item">
+        <div class="img_wraper">
+          <img src="/images/shikshagraha.png" alt="Shikshagraha Logo">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- ---------------- Section - 12 ----------------- -->

@@ -46,6 +46,38 @@ navLinks.forEach(link => {
 });
 
 
+// -----------------Tagline ----------------------
+var taglines = (function () {
+    "use strict";
+
+    function changeTaglines() {
+        var taglines = jQuery(".tagline"),
+            taglinesIndex = -1;
+
+        function showNextTagline() {
+            ++taglinesIndex;
+            taglines.eq(taglinesIndex % taglines.length)
+                .fadeIn(1000)
+                .delay(6000)
+                .fadeOut(1000, showNextTagline);
+        }
+
+        showNextTagline();
+    }
+
+    return {
+        init: function () {
+            changeTaglines();
+        }
+    };
+
+}());
+
+jQuery(function () {
+    "use strict";
+    taglines.init();
+});
+
 
 
 // ---------------FAQ--------------
