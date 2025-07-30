@@ -436,7 +436,7 @@ img {
 /* Neon effect on H1 */
 #home p span {
   color: #ffea2b;
-  font-size: 2rem;
+  font-size: 1.6rem;
   opacity: 0.9;
 }
 
@@ -577,7 +577,6 @@ img {
   border-radius: 30px;
   background: var(--bg-secondary);
   border: #ffea2b solid 4px;
-  box-shadow: #ffea2b 0px 0px 20px;
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
@@ -585,7 +584,7 @@ img {
 }
 
 .thoughts-container .item:hover {
-  text-shadow: #ffea2b 0px 0px 20px;
+  text-shadow: #fff 0px 0px 4px;
   cursor: pointer;
 }
 
