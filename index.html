@@ -1,503 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <title>conclave</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>conclave</title>
 
-  <!-- bootstrap cdn--->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap cdn--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-RXf+QSDCUQs6fUaa+57Axk0ZZI6pIWGAaK7Hekjw+H9Qa5Z+JjkDwNsoG5i46z4z6rE3xGGLXk5X56hFmcTwkA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-RXf+QSDCUQs6fUaa+57Axk0ZZI6pIWGAaK7Hekjw+H9Qa5Z+JjkDwNsoG5i46z4z6rE3xGGLXk5X56hFmcTwkA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Home section google font link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Home section google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- custom css file link  -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/slides.scss">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slides.scss">
 
-  <!-- Custom Owl carousel link -->
-  <link rel="stylesheet" href="/css/styles.scss">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <!-- Custom Owl carousel link -->
+    <link rel="stylesheet" href="/css/styles.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
 
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <!-- jQuery Library -->
-  <script type='text/javascript'
-    src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    <!-- jQuery Library -->
+    <script type='text/javascript'
+      src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
 
-</head>
+  </head>
 
+  <body>
 
-<body>
+    <!-- ------------------- Header Section ------------------ -->
+    <header id="main-header">
+      <div class="container trasparent scrolled">
+        <div id="logo">ROOTS <br> <span>Education Mile</span></div>
+        <button id="menu-toggle">&#9776;</button>
+        <nav id="navbar">
+          <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#visualmaps" class="nav-link">Journey</a></li>
+            <li><a href="#explore" class="nav-link">Explore</a></li>
+            <li><a href="#faq" class="nav-link">FAQ </a></li>
+            <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
+            <li>
+              <!-- ------------------- Register Section ------------------ -->
+              <a href="form.html" class="register-container">
+                <button type="button" class="register-btn">Register Now</button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- ------------------- Header Section ------------------ -->
-  <header id="main-header">
-    <div class="container trasparent scrolled">
-      <div id="logo">ROOTS <br> <span>Education Mile</span></div>
-      <button id="menu-toggle">&#9776;</button>
-      <nav id="navbar">
-        <ul>
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#visualmaps" class="nav-link">Journey</a></li>
-          <li><a href="#explore" class="nav-link">Explore</a></li>
-          <li><a href="#faq" class="nav-link">FAQ </a></li>
-          <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
-          <li>
-            <!-- ------------------- Register Section ------------------ -->
-            <a href="form.html" class="register-container">
-              <button type="button" class="register-btn">Register Now</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <!-- ---------------- Section - 1 ----------------- -->
+    <!-- home section starts  -->
+    <section id="home">
+      <div class="container">
+        <h1>An Educational Design Conclave By The Coast</h1>
+        <p><span> ROOTS – Realities | Outcomes | Opportunities | Travel | Solutions</span></p>
+        <a href="#awaits" class="btn">Explore</a>
+      </div>
+    </section>
+
+    <!------------------- Tag Lines ------------------------>
+    <div id="taglines">
+      <div class="taglines" data-aos="flip-down" data-aos-duration="1000">
+      <div class="tagline tagline-1">
+        <h1>Fix a fishing net. See how everything connects.</h1>
+        <h2>What holds a net together holds a system together too.</h2>
+      </div>
+      <div class="tagline tagline-2">
+        <h1>Get hands-deep in clay. Get head-deep in ideas.</h1>
+        <h2>Journey through villages. Design the future.</h2>
+      </div>
+      <div class="tagline tagline-3">
+        <h1>The beach is your classroom. The sea, your case study.</h1>
+        <h2>Learn from tides, people, and places.</h2>
+      </div>
     </div>
-  </header>
-
-
-  <!-- ---------------- Section - 1 ----------------- -->
-  <!-- home section starts  -->
-  <section id="home">
-    <div class="container">
-      <h1>An Educational Design Conclave By The Coast</h1>
-      <p><span> ROOTS – Realities | Outcomes | Opportunities | Travel | Solutions</span></p>
-      <a href="#awaits" class="btn">Explore</a>
     </div>
-  </section>
-
-  <!------------------- Tag Lines ------------------------>
-  <div id="taglines">
-     <div class="taglines" data-aos="flip-down" data-aos-duration="1000">
-    <div class="tagline tagline-1">
-      <h1>Fix a fishing net. See how everything connects.</h1>
-      <h2>What holds a net together holds a system together too.</h2>
-    </div>
-    <div class="tagline tagline-2">
-      <h1>Get hands-deep in clay. Get head-deep in ideas.</h1>
-      <h2>Journey through villages. Design the future.</h2>
-    </div>
-    <div class="tagline tagline-3">
-      <h1>The beach is your classroom. The sea, your case study.</h1>
-      <h2>Learn from tides, people, and places.</h2>
-    </div>
-  </div>
-  </div>
  
+    <!-- ---------------- Section - 2 ----------------- -->
+    <!-- Educational Mile  -->
+    <section id="about">
 
-  <!-- ---------------- Section - 2 ----------------- -->
-  <!-- Educational Mile  -->
-  <section id="about">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-5 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
-          <div>
-            <img src="/images/about-us.jpg" alt="Fresh Ideas At Beach">
-          </div>
-        </div>
-
-        <div class="col-lg-8 col-md-6 col-sm-12 about-text" data-aos="fade-left" data-aos-duration="1000">
-          <div class="about-text">
-            <h2>The Education Mile</h2>
-            <p>
-              A 3-Day Moving Conclave. Two days learning with communities in Nagapattinam and one day building bold
-              ideas in
-              Auroville.
-            </p>
-            <p>
-              This is an immersive journey. You’ll live alongside communities and engage with practitioners,
-              policymakers,
-              and educators, not just in lecture halls, but in living villages.
-            </p>
-            <p>
-              You’ll see how education, policy, and livelihoods intersect and how design thinking emerges from the
-              ground
-              up.
-            </p>
-            <p>
-              <strong>October 9th-12th, 2025</strong>
-            </p>
-            <div class="register-button">
-              <a href="/form.html" class="btn">Register Now</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
+            <div>
+              <img src="/images/about-us.jpg" alt="Fresh Ideas At Beach">
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <!-- ---------------- Section - 3 ----------------- -->
-  <!-- Thoughts Cards Section -->
-  <div id="thoughts">
-    <h2>If You’ve Ever Thought...</h2>
-    <div class="thoughts-container">
-      <div class="item" data-aos="fade-up" data-aos-duration="2000">“I want to move beyond quick fixes and shape lasting change.”</div>
-      <div class="item" data-aos="fade-up" data-aos-duration="2000"> “I need space to step back, reflect, and sharpen my approach.”</div>
-      <div class="item" data-aos="fade-up" data-aos-duration="2000">“I want to meet others who are not just talking, but also building.”</div>
-    </div>
-    <a href="#awaits" class="btn">Then, you will feel at home here.</a>
-  </div>
-
-
-  <!-- ---------------- Section - 4 ----------------- -->
-  <!-- Pioneers Section  -->
-  <section id="pioneers">
-    <div class="container">
-      <h2> Who’s This Space For? </h2>
-      <div class="row g-5 service-container">
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-people-group"></i>
-            </div>
-            <p>
-              <strong>CSR Leaders and Corporate Professionals</strong> driving education investments and seeking
-              meaningful, systemic impact
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-building-ngo"></i>
-            </div>
-            <p>
-              <strong>NGO Founders <br> and Professionals </strong>working in the education sector, designing programs
-              that must work on the ground.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-            <p>
-              <strong>Policy <br>Professionals</strong> <br> aligning high-level vision with what actually happens in
-              classrooms.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-person-chalkboard"></i>
-            </div>
-            <p>
-              <strong>Youth Mentors & Skill Coaches </strong> shaping real-world readiness through mindset, and modern
-              skills.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <p>
-              <strong>Educators, School Heads, and Practitioners </strong> pushing the boundaries of traditional
-              schooling.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="service card-effect bounceInUp">
-            <div class="iconbox">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <p>
-              <strong>Students </strong> <br> curious about changing learning experiences for children.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ---------------- Section - 5 ----------------- -->
-  <!-- Mindset Section  -->
-  <div class="mindset-section">
-    <h2>People Who Build, Not Just Skilled</h2>
-    <div class="mindset-wrapper">
-      <div class="cols">
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="m-container">
-            <div class="front">
-              <div class="inner">
-                <p>Curious Enough To Question</p>
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>Curiosity cracks open the doors that certainty keeps shut.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="m-container">
-            <div class="front">
-              <div class="inner">
-                <p>Bold Enough To Protoytype</p>
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>Progress favors those who dare to test, not just talk.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="m-container">
-            <div class="front">
-              <div class="inner">
-                <p>Humble Enough To Unlearn</p>
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>Letting go of what you know is the first step to grow.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="m-container">
-            <div class="front">
-              <div class="inner">
-                <p>Commited Enough To Build Together</p>
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>Great things are built not alone, but in brave collaboration.</p>
+          <div class="col-lg-8 col-md-6 col-sm-12 about-text" data-aos="fade-left" data-aos-duration="1000">
+            <div class="about-text">
+              <h2>The Education Mile</h2>
+              <p>
+                A 3-Day Moving Conclave. Two days learning with communities in Nagapattinam and one day building bold
+                ideas in
+                Auroville.
+              </p>
+              <p>
+                This is an immersive journey. You’ll live alongside communities and engage with practitioners,
+                policymakers,
+                and educators, not just in lecture halls, but in living villages.
+              </p>
+              <p>
+                You’ll see how education, policy, and livelihoods intersect and how design thinking emerges from the
+                ground
+                up.
+              </p>
+              <p>
+                <strong>October 9th-12th, 2025</strong>
+              </p>
+              <div class="register-button">
+                <a href="/form.html" class="btn">Register Now</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Mindset Text Section -->
-  <p class="mindset-text1">
-        This is your moment.<br>
-        Enter a space of bold ideas, lasting moments, and powerful tools.<br><br>
-  </p>
-  <p class="mindset-text2">
-        Leap in. Level up. Leave a legacy.
-  </p>
+    </section>
 
-
-  <!-- --------------------- Section - 6 ---------------------- -->
-  <!-- Section: What Awaits -->
-  <section id="awaits" class="awaits-section">
-    <div class="container3">
-      <h2>What awaits you?</h2>
-      <p>More than a conclave, it’s a space to...</p>
-
-      <div class="awaits-grid">
-        <div class="await-card">
-          <div class="icon-circle"><i class="fas fa-bolt"></i></div>
-          <p><strong>Work on Live Challenges</strong> with others who care</p>
-        </div>
-        <div class="await-card">
-          <div class="icon-circle"><i class="fas fa-drafting-compass"></i></div>
-          <p><strong>Prototype Solutions</strong> in a collaborative setting</p>
-        </div>
-        <div class="await-card">
-          <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
-          <p><strong>Learn Directly</strong> from field practitioners and system leaders</p>
-        </div>
-        <div class="await-card">
-          <div class="icon-circle"><i class="fas fa-map-marked-alt"></i></div>
-          <p><strong>Visit Communities</strong> where change is unfolding</p>
-        </div>
-        <div class="await-card">
-          <div class="icon-circle"><i class="fas fa-network-wired"></i></div>
-          <p><strong>Build Connections</strong> that last well beyond the event</p>
-        </div>
+    <!-- ---------------- Section - 3 ----------------- -->
+    <!-- Thoughts Cards Section -->
+    <div id="thoughts">
+      <h2>If You’ve Ever Thought...</h2>
+      <div class="thoughts-container">
+        <div class="item" data-aos="fade-up" data-aos-duration="2000">“I want to move beyond quick fixes and shape lasting change.”</div>
+        <div class="item" data-aos="fade-up" data-aos-duration="2000"> “I need space to step back, reflect, and sharpen my approach.”</div>
+        <div class="item" data-aos="fade-up" data-aos-duration="2000">“I want to meet others who are not just talking, but also building.”</div>
       </div>
-
-      <p>
-        Leave with new perspectives, meaningful relationships, and tools to take your work to the next level.
-      </p>
-      
-      <div class="register-button">
-        <a href="/form.html" class="btn">Register Now</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ---------------- Section - 7 ----------------- -->
-
-  <section id="visualmaps">
-    <div class="intro-text">
-      <h2>What’s Coming Your Way?<br>A Peek Into the Conclave Journey...</h2>
+      <a href="#awaits" class="btn">Then, you will feel at home here.</a>
     </div>
 
-    <div class="container1">
-      <div class="panel active" style="background-image: url('images/Engage_your_Core.jpg');">
-        <h3>Engage Your Core</h3>
-      </div>
-      <div class="panel" style="background-image: url('images/Explore_A_Fisherman Cove.jpg');">
-        <h3>Explore A Fisherman Cove</h3>
-      </div>
-      <div class="panel" style="background-image: url('images/Fun_with_your_Folks.jpg');">
-        <h3>Fun With Your Folks</h3>
-      </div>
-      <div class="panel" style="background-image: url('images/Groove_into_the_Coastal Rhythm.png');">
-        <h3>Groove Into The Coastal Rhythm</h3>
-      </div>
-      <div class="panel" style="background-image: url('images/Listen to the Indigenous.jpg');">
-        <h3>Listen to the Indigenous</h3>
-      </div>
-    </div>
-  </section>
+    <!-- ---------------- Section - 4 ----------------- -->
+    <!-- Pioneers Section  -->
+    <section id="pioneers">
+      <div class="container">
+        <h2> Who’s This Space For? </h2>
+        <div class="row g-5 service-container">
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <p>
+                <strong>CSR Leaders and Corporate Professionals</strong> driving education investments and seeking
+                meaningful, systemic impact
+              </p>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-building-ngo"></i>
+              </div>
+              <p>
+                <strong>NGO Founders <br> and Professionals </strong>working in the education sector, designing programs
+                that must work on the ground.
+              </p>
+            </div>
+          </div>
 
-  <!--------------------- Section - 8 ----------------- -->
-  <!-- Explore Section -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <p>
+                <strong>Policy <br>Professionals</strong> <br> aligning high-level vision with what actually happens in
+                classrooms.
+              </p>
+            </div>
+          </div>
 
-  <section id="explore">
-    <h2>Explore The Journey</h2>
-    <main class="page-content">
-      <div class="e-card e-card-img1">
-        <div class="content">
-          <h2 class="title">Day - 1: What Can a Village Teach About Design?</h2>
-          <h3 class="sub-title">📍 Kameswaram Village, Nagapattinam</h3>
-          <p class="copy">Have you ever watched a community solve problems without using the word “design”?
-            <br> <br>Here, you’ll walk through boats and backwaters, rituals and routines and notice how learning is woven into life itself.
-            <br> <br><strong class="sub-title">Themes:</strong> Community Wisdom • Adaptive Problem-Solving • Learning from Livelihoods
-          </p>
-          <a href="/form.html"><button class="e-btn">Register Now</button></a>
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-person-chalkboard"></i>
+              </div>
+              <p>
+                <strong>Youth Mentors & Skill Coaches </strong> shaping real-world readiness through mindset, and modern
+                skills.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <p>
+                <strong>Educators, School Heads, and Practitioners </strong> pushing the boundaries of traditional
+                schooling.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service card-effect bounceInUp">
+              <div class="iconbox">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p>
+                <strong>Students </strong> <br> curious about changing learning experiences for children.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="e-card e-card-img2">
-        <div class="content">
-          <h2 class="title">Day - 2: Learn by Doing, Listen by Being</h2>
-          <h3 class="sub-title">📍 Pottery Hamlet & Tribal Learning Spaces, Nagapattinam</h3>
-          <p class="copy">
-            What if your best insights come not from a workshop, but from moulding clay or cooking over a fire? <br><br>
-            Step into spaces where wisdom flows through doing; Knowledge passed down patiently, purposefully, through generations. <br><br>
-            <strong class="sub-title">Themes: </strong>Indigenous Knowledge • Sustainability • Learning by Making
-          </p>
-          <a href="/form.html"><button class="e-btn">Register Now</button></a>        </div>
-      </div>
-      <div class="e-card e-card-img3">
-        <div class="content">
-          <h2 class="title">Day - 3: <br>Build What’s Next</h2>
-          <h3 class="sub-title">📍Chennai</h3>
-          <p class="copy">
-            Now, it’s your turn to create. Not just reflect.
-            <br><br>Translate everything you’ve seen, challenged, and reimagined into prototypes that reshape the future of education.
-            <br><br> Collaborate with bold minds, design without limits and leave not with ideas, but a solid plan.
-            <br><br><strong class="sub-title">Themes: </strong>Collaborative Prototyping • System Innovation • Future Roadmaps
-          </p>
-          <a href="/form.html"><button class="e-btn">Register Now</button></a>        </div>
-    </main>
-  </section>
+    </section>
 
-
-
-  <!-- ---------------- Section - 9 ----------------- -->
-
-  <!-- Mentors section starts  -->
-  <!-- <div class="container2 main">
-    <div class="row">
-      <h1 style="text-align:center;color:#024063;font-weight:bold;margin-bottom:60px;font-family:Poppins">
-      Mentors & People You’ll Meet
-      </h1> -->
-  <div>
-    <!-- Card 1 -->
-    <!-- <div class="col-lg-4 col-md-6">
-          <div class="member-wrapper">
-            <div class="member">
-              <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
-              <div class="info">
-                <h3>Peter</h3>
-                <div class="social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-google-plus"></i></a>
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+    <!-- ---------------- Section - 5 ----------------- -->
+    <!-- Mindset Section  -->
+    <div class="mindset-section">
+      <h2>People Who Build, Not Just Skilled</h2>
+      <div class="mindset-wrapper">
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="m-container">
+              <div class="front">
+                <div class="inner">
+                  <p>Curious Enough To Question</p>
                 </div>
-                <div class="bio">
-                  <h4>Bio:</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Curiosity cracks open the doors that certainty keeps shut.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
-
-    <!-- Card 2 -->
-    <!-- <div class="col-lg-4 col-md-6">
-          <div class="member-wrapper">
-            <div class="member">
-              <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
-              <div class="info">
-                <h3>Emma</h3>
-                <div class="social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-google-plus"></i></a>
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="m-container">
+              <div class="front">
+                <div class="inner">
+                  <p>Bold Enough To Protoytype</p>
                 </div>
-                <div class="bio">
-                  <h4>Bio:</h4>
-                  <p>Passionate designer and front-end developer. Loves creating interactive user experiences.</p>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Progress favors those who dare to test, not just talk.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
-
-    <!-- Card 3 -->
-    <!-- <div class="col-lg-4 col-md-6">
-          <div class="member-wrapper">
-            <div class="member">
-              <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
-              <div class="info">
-                <h3>Ravi</h3>
-                <div class="social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-google-plus"></i></a>
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="m-container">
+              <div class="front">
+                <div class="inner">
+                  <p>Humble Enough To Unlearn</p>
                 </div>
-                <div class="bio">
-                  <h4>Bio:</h4>
-                  <p>Backend developer and automation expert with 5+ years of experience in Python and Flask.</p>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Letting go of what you know is the first step to grow.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="m-container">
+              <div class="front">
+                <div class="inner">
+                  <p>Commited Enough To Build Together</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>Great things are built not alone, but in brave collaboration.</p>
                 </div>
               </div>
             </div>
@@ -505,215 +301,395 @@
         </div>
       </div>
     </div>
-  -->
-  </div>
-
-  <!--==================== You'll Also Meet ====================-->
-  <!-- <section class="about section" id="about">
-    <div class="about__container container grid">
-      <h2 class="section__title-1">
-        <span>You’ll also meet:</span>
-      </h2>
-
-      <div class="about__perfil">
-        <div class="about__image">
-          <img src="images/You’ll.jpg" alt="image" class="about__img">
-
-          <div class="about__shadow"></div>
-
-          <div class="geometric-box"></div>
-
-          <div class="about__box"></div>
-        </div>
-      </div>
-
-      <div class="about__info">
-        <p class="about__description">
-        Fisherfolk sharing generational knowledge
-  Local administrators driving grassroots change
-  Teachers who bring policy alive
-  Peers who become collaborators for life
-        </p>
-
-        
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-  <!-- ---------------- Section - 10 ----------------- -->
-  <!--Pricing Section-->
-  <section class="pricing-section">
-    <h2>Pricing & Offers</h2>
-    <p>We value inclusivity. Here's what you pay and who gets support.</p>
-
-    <div class="card3-container">
-      <!-- Price card3 -->
-      <div class="card3 price-card3">
-        <h2>₹15,000/-</h2>
-        <p>for a 3-day immersive journey inclusive of accommodation, food, and workshops</p>
-      </div>
-
-      <!-- Discount card3 -->
-      <div class="card3 discount-card3">
-        <h3>We believe in access.</h3>
-        <p><strong>Offers</strong> are available for:</p>
-        <ul class="discount-list">
-          <li><span class="badge">1</span> Students <strong>- 75% off</strong></li>
-          <li><span class="badge">2</span> NGO & School Workers <strong>- 50% off</strong></li>
-          <li><span class="badge">3</span> Rural Entrepreneurs <strong>- 40% off</strong></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ---------------------- Section - 11 ------------------------- -->
-  <!-- Partners section  -->
-  <div class="partners container">
-    <h2>Our Partners</h2>
-    <div class="partners flex">
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/DEEP.png" alt="DEEP Logo">
-
-        </div>
-      </div>
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/tn.png" alt="TN logo">
-        </div>
-      </div>
-      <div class="partners item">
-        <div class="img_wraper">
-          <img src="/images/shikshagraha.png" alt="Shikshagraha Logo">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ---------------- Section - 12 ----------------- -->
-  <!--------------- Faq ------------------------>
-  <section id="faq">
-
-    <div class="wrapper">
-      <h2 style="color: #fff;">FAQ's</h2>
-      <div class="faq-container">
-        <div class="question">
-          I’m physically challenged, will the zones be accessible?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            Let us know your needs, we’ll do our best to accommodate.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-container">
-        <div class="question">
-          Can I join for just one day?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            This is a continuous 3-day journey. Partial attendance breaks the flow; we recommend committing fully.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-container">
-        <div class="question">
-          I don’t have a background in design or education. Can I still join?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            Yes! If you're curious, open to learning, and ready to get your hands dirty, you’ll fit right in.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-container">
-        <div class="question">
-          Where will we stay during the conclave?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            Expect simple, comfortable accommodations near the coastal villages. This is about being close to the
-            experience, not luxury.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-container">
-        <div class="question">
-          What should I bring with me?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            Comfortable clothes, sturdy footwear, curiosity, and an open mind. A detailed checklist will be shared after
-            registration.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-container">
-        <div class="question">
-          Whom can I contact if I have more questions?
-        </div>
-        <div class="answercont">
-          <div class="answer">
-            Write to us at [XXX] or message us on WhatsApp [000].
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ---------------- Contact Section -------------- -->
-
-
-
-  <!-- ---------------- Section - 13 ----------------- -->
-  <!-- --------------Copyright Section ---------------------- -->
-  <div class="Copyright">
-    <p> Copyright &copy;
-      <script>
-        document.write(new Date().getFullYear());
-      </script>
-      All rights reserved | <a href="https://tntechnest.com/">TN Technest</a> 
+    <!-- Mindset Text Section -->
+    <p class="mindset-text1">
+          This is your moment.<br>
+          Enter a space of bold ideas, lasting moments, and powerful tools.<br><br>
     </p>
-  </div>
+    <p class="mindset-text2">
+          Leap in. Level up. Leave a legacy.
+    </p>
 
-  </div>
-  </section>
+    <!-- --------------------- Section - 6 ---------------------- -->
+    <!-- Section: What Awaits -->
+    <section id="awaits" class="awaits-section">
+      <div class="container3">
+        <h2>What awaits you?</h2>
+        <p>More than a conclave, it’s a space to...</p>
+
+        <div class="awaits-grid">
+          <div class="await-card">
+            <div class="icon-circle"><i class="fas fa-bolt"></i></div>
+            <p><strong>Work on Live Challenges</strong> with others who care</p>
+          </div>
+          <div class="await-card">
+            <div class="icon-circle"><i class="fas fa-drafting-compass"></i></div>
+            <p><strong>Prototype Solutions</strong> in a collaborative setting</p>
+          </div>
+          <div class="await-card">
+            <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
+            <p><strong>Learn Directly</strong> from field practitioners and system leaders</p>
+          </div>
+          <div class="await-card">
+            <div class="icon-circle"><i class="fas fa-map-marked-alt"></i></div>
+            <p><strong>Visit Communities</strong> where change is unfolding</p>
+          </div>
+          <div class="await-card">
+            <div class="icon-circle"><i class="fas fa-network-wired"></i></div>
+            <p><strong>Build Connections</strong> that last well beyond the event</p>
+          </div>
+        </div>
+
+        <p>
+          Leave with new perspectives, meaningful relationships, and tools to take your work to the next level.
+        </p>
+        
+        <div class="register-button">
+          <a href="/form.html" class="btn">Register Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------- Section - 7 ----------------- -->
+    <section id="visualmaps">
+      <div class="intro-text">
+        <h2>What’s Coming Your Way?<br>A Peek Into the Conclave Journey...</h2>
+      </div>
+
+      <div class="container1">
+        <div class="panel active" style="background-image: url('images/Engage_your_Core.jpg');">
+          <h3>Engage Your Core</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/Explore_A_Fisherman Cove.jpg');">
+          <h3>Explore A Fisherman Cove</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/Fun_with_your_Folks.jpg');">
+          <h3>Fun With Your Folks</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/Groove_into_the_Coastal Rhythm.png');">
+          <h3>Groove Into The Coastal Rhythm</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/Listen to the Indigenous.jpg');">
+          <h3>Listen to the Indigenous</h3>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------- Section - 8 ----------------- -->
+    <!-- Explore Section -->
+
+    <section id="explore">
+      <h2>Explore The Journey</h2>
+      <main class="page-content">
+        <div class="e-card e-card-img1">
+          <div class="content">
+            <h2 class="title">Day - 1: What Can a Village Teach About Design?</h2>
+            <h3 class="sub-title">📍 Kameswaram Village, Nagapattinam</h3>
+            <p class="copy">Have you ever watched a community solve problems without using the word “design”?
+              <br> <br>Here, you’ll walk through boats and backwaters, rituals and routines and notice how learning is woven into life itself.
+              <br> <br><strong class="sub-title">Themes:</strong> Community Wisdom • Adaptive Problem-Solving • Learning from Livelihoods
+            </p>
+            <a href="/form.html"><button class="e-btn">Register Now</button></a>
+          </div>
+        </div>
+        <div class="e-card e-card-img2">
+          <div class="content">
+            <h2 class="title">Day - 2: Learn by Doing, Listen by Being</h2>
+            <h3 class="sub-title">📍 Pottery Hamlet & Tribal Learning Spaces, Nagapattinam</h3>
+            <p class="copy">
+              What if your best insights come not from a workshop, but from moulding clay or cooking over a fire? <br><br>
+              Step into spaces where wisdom flows through doing; Knowledge passed down patiently, purposefully, through generations. <br><br>
+              <strong class="sub-title">Themes: </strong>Indigenous Knowledge • Sustainability • Learning by Making
+            </p>
+            <a href="/form.html"><button class="e-btn">Register Now</button></a>        </div>
+        </div>
+        <div class="e-card e-card-img3">
+          <div class="content">
+            <h2 class="title">Day - 3: <br>Build What’s Next</h2>
+            <h3 class="sub-title">📍Chennai</h3>
+            <p class="copy">
+              Now, it’s your turn to create. Not just reflect.
+              <br><br>Translate everything you’ve seen, challenged, and reimagined into prototypes that reshape the future of education.
+              <br><br> Collaborate with bold minds, design without limits and leave not with ideas, but a solid plan.
+              <br><br><strong class="sub-title">Themes: </strong>Collaborative Prototyping • System Innovation • Future Roadmaps
+            </p>
+            <a href="/form.html"><button class="e-btn">Register Now</button></a>        </div>
+      </main>
+    </section>
+
+    <!-- ---------------- Section - 9 ----------------- -->
+    <!-- Mentors section starts  -->
+    <!-- <div class="container2 main">
+      <div class="row">
+        <h1 style="text-align:center;color:#024063;font-weight:bold;margin-bottom:60px;font-family:Poppins">
+        Mentors & People You’ll Meet
+        </h1> -->
+    <div>
+      <!-- Card 1 -->
+      <!-- <div class="col-lg-4 col-md-6">
+            <div class="member-wrapper">
+              <div class="member">
+                <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
+                <div class="info">
+                  <h3>Peter</h3>
+                  <div class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                  </div>
+                  <div class="bio">
+                    <h4>Bio:</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+      <!-- Card 2 -->
+      <!-- <div class="col-lg-4 col-md-6">
+            <div class="member-wrapper">
+              <div class="member">
+                <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
+                <div class="info">
+                  <h3>Emma</h3>
+                  <div class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                  </div>
+                  <div class="bio">
+                    <h4>Bio:</h4>
+                    <p>Passionate designer and front-end developer. Loves creating interactive user experiences.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+      <!-- Card 3 -->
+      <!-- <div class="col-lg-4 col-md-6">
+            <div class="member-wrapper">
+              <div class="member">
+                <div class="photo" style="background-image: url('https://studiomarcofischer.com/images/portrait-men/portrait-men-004-studiomarcofischer.jpg');"></div>
+                <div class="info">
+                  <h3>Ravi</h3>
+                  <div class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                  </div>
+                  <div class="bio">
+                    <h4>Bio:</h4>
+                    <p>Backend developer and automation expert with 5+ years of experience in Python and Flask.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    -->
+    </div>
+
+    <!--==================== You'll Also Meet ====================-->
+    <!-- <section class="about section" id="about">
+      <div class="about__container container grid">
+        <h2 class="section__title-1">
+          <span>You’ll also meet:</span>
+        </h2>
+
+        <div class="about__perfil">
+          <div class="about__image">
+            <img src="images/You’ll.jpg" alt="image" class="about__img">
+
+            <div class="about__shadow"></div>
+
+            <div class="geometric-box"></div>
+
+            <div class="about__box"></div>
+          </div>
+        </div>
+
+        <div class="about__info">
+          <p class="about__description">
+          Fisherfolk sharing generational knowledge
+    Local administrators driving grassroots change
+    Teachers who bring policy alive
+    Peers who become collaborators for life
+          </p>
+
+          
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ---------------- Section - 10 ----------------- -->
+    <!--Pricing Section-->
+    <section class="pricing-section">
+      <h2>Pricing & Offers</h2>
+      <p>We value inclusivity. Here's what you pay and who gets support.</p>
+
+      <div class="card3-container">
+        <!-- Price card3 -->
+        <div class="card3 price-card3">
+          <h2>₹15,000/-</h2>
+          <p>for a 3-day immersive journey inclusive of accommodation, food, and workshops</p>
+        </div>
+
+        <!-- Discount card3 -->
+        <div class="card3 discount-card3">
+          <h3>We believe in access.</h3>
+          <p><strong>Offers</strong> are available for:</p>
+          <ul class="discount-list">
+            <li><span class="badge">1</span> Students <strong>- 75% off</strong></li>
+            <li><span class="badge">2</span> NGO & School Workers <strong>- 50% off</strong></li>
+            <li><span class="badge">3</span> Rural Entrepreneurs <strong>- 40% off</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------- Section - 11 ------------------------- -->
+    <!-- Partners section  -->
+    <div class="partners container">
+      <h2>Our Partners</h2>
+      <div class="partners flex">
+        <div class="partners item">
+          <div class="img_wraper">
+            <img src="/images/DEEP.png" alt="DEEP Logo">
+
+          </div>
+        </div>
+        <div class="partners item">
+          <div class="img_wraper">
+            <img src="/images/tn.png" alt="TN logo">
+          </div>
+        </div>
+        <div class="partners item">
+          <div class="img_wraper">
+            <img src="/images/shikshagraha.png" alt="Shikshagraha Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------- Section - 12 ----------------- -->
+    <!--------------- Faq ------------------------>
+    <section id="faq">
+
+      <div class="wrapper">
+        <h2 style="color: #fff;">FAQ's</h2>
+        <div class="faq-container">
+          <div class="question">
+            I’m physically challenged, will the zones be accessible?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Let us know your needs, we’ll do our best to accommodate.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="question">
+            Can I join for just one day?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              This is a continuous 3-day journey. Partial attendance breaks the flow; we recommend committing fully.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="question">
+            I don’t have a background in design or education. Can I still join?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Yes! If you're curious, open to learning, and ready to get your hands dirty, you’ll fit right in.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="question">
+            Where will we stay during the conclave?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Expect simple, comfortable accommodations near the coastal villages. This is about being close to the
+              experience, not luxury.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="question">
+            What should I bring with me?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Comfortable clothes, sturdy footwear, curiosity, and an open mind. A detailed checklist will be shared after
+              registration.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="question">
+            Whom can I contact if I have more questions?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Write to us at [XXX] or message us on WhatsApp [000].
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ---------------- Contact Section -------------- -->
 
 
-  <!-- ------scroller to top -->
-
-  <a href="#top" class="to-top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-
-
-
-  <!-- product section links -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <!-- custom js file link  -->
-  <script src="js/script.js"></script>
-  <script src="js/allscript.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- ---------------- Section - 13 ----------------- -->
+    <!-- --------------Copyright Section ---------------------- -->
+    <div class="Copyright">
+      <p> Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        All rights reserved | <a href="https://tntechnest.com/">TN Technest</a> 
+      </p>
+    </div>
 
 
-</body>
+    <!-- ------scroller to top -->
 
+    <a href="#top" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+
+    <!-- product section links -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/allscript.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

@@ -58,12 +58,6 @@ h3 {
   font-weight: 600;
 }
 
-.secondary-heading {
-  font-family: var(--font-secondary);
-  color: var(--text-yellow);
-  margin-bottom: 1rem;
-}
-
 
 h2 {
   font-size: 2.5rem;
@@ -72,19 +66,6 @@ h2 {
   position: relative;
   padding-bottom: 10px;
 }
-
-
-/* Neon underline effect for H2
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 2px;
-    background-color: var(--neon-blue);
-} */
 
 p {
   color: var(--text-medium);
@@ -107,105 +88,6 @@ section {
   min-height: 80vh;
   /* Ensure sections take up space */
 }
-
-/* Apply alternating background */
-#about {
-  /* Sections with dark background */
-  background-color: var(--bg-primary);
-}
-
-
-/* ---------------------------FAQ Css------------------------------ */
-
-#faq {
-  height: auto;
-  font-family: var(--font-primary);
-  background-color: var(--bg-secondary);
-  color: var(--text-medium);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.faq-container {
-  background-color: white;
-  color: black;
-  border-radius: 20px;
-  box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.25);
-  margin: 10px auto;
-  width: 60vw;
-}
-
-.question {
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 0.5rem 2.5rem 0.5rem 1rem;
-  width: auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: var(--text-blue);
-}
-
-@media (max-width: 790px) {
-  .faq-container {
-    width: 80vw;
-  }
-}
-
-.question::after {
-  content: "\002B";
-  font-size: 2.2rem;
-  position: absolute;
-  right: 20px;
-  transition: 0.2s;
-}
-
-.question.active::after {
-  transform: rotate(45deg);
-}
-
-.answercont {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.3s;
-  color: #024063;
-
-}
-
-
-.answer {
-  padding: 0 20px 20px;
-  line-height: 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-medium);
-  font-style: italic;
-}
-
-
-@media screen and (max-width: 790px) {
-  html {
-    font-size: 14px;
-  }
-
-  .wrapper {
-    width: 80%;
-  }
-}
-
-
 
 img {
   max-width: 100%;
@@ -449,7 +331,7 @@ img {
 }
 
 
-/* ---------- Tagline -------------*/
+/* -------------------------------------------- Tagline -------------------------------------------*/
 #taglines {
   display: flex;
   justify-content: center;
@@ -496,7 +378,7 @@ img {
   }
 }
 
-/* ----------------- About Section --------------------- */
+/* -------------------------------------- About Section ---------------------------------------------- */
 
 #about {
   margin-top: 2rem;
@@ -600,7 +482,7 @@ img {
   }
 }
 
-/* ----------------------------Thoughts Cards Css--------------------------- */
+/* ----------------------------------------Thoughts Cards Css--------------------------------------- */
 
 #thoughts {
   text-align: center;
@@ -671,7 +553,7 @@ img {
 
 }
 
-/* -------------------------- Pioneers Section ------------------------- */
+/* ----------------------------------------- Pioneers Section ------------------------------------------ */
 
 #pioneers {
   background-color: var(--bg-secondary);
@@ -777,9 +659,7 @@ img {
   text-align: center;
 }
 
-
-
-/* -------------------------------Mindset Section CSS--------------------------------- */
+/* -----------------------------------------Mindset Section CSS---------------------------------------- */
 .mindset-section {
   background-color: var(--neon-yellow-light);
   padding: 2rem 2rem;
@@ -1007,9 +887,123 @@ img {
   }
 }
 
+/* --------------------------------------- Awaits Section --------------------------------------------- */
+.container3 {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
 
+#awaits .container3 .register-button {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
 
-/* -------------------------------Visual Map Experience--------------------------------- */
+.awaits-section {
+  background-color: var(--bg-primary);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.awaits-section h2 {
+  margin-bottom: 20px;
+}
+
+.awaits-section p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 6px;
+  color: var(--text-blue);
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.awaits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style all cards */
+.awaits-grid>div {
+  flex: 1 1 calc(33.33% - 20px);
+  /* 3 per row minus gap */
+  max-width: calc(33.33% - 20px);
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Force only 2 items in second row by stretching last 2 cards */
+@media (min-width: 992px) {
+
+  .awaits-grid>div:nth-child(4),
+  .awaits-grid>div:nth-child(5) {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Style all cards */
+.await-card {
+  background-color: #fff;
+  padding: 25px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Text */
+.await-card p {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+}
+
+.await-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #023f635b;
+}
+
+/* Center bottom two cards */
+.await-card.bottom-row {
+  grid-column: 1 / span 3;
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .awaits-grid>div {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Small Devices Single Cards */
+@media (max-width: 576px) {
+  .awaits-grid>div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/*-----------------Awaits Icon ------------------*/
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #024063;
+  color: var(--text-yellow);
+  font-size: 26px;
+  border-radius: 100px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------Visual Map Experience--------------------------------- */
 
 #visualmaps {
   background-color: #024063;
@@ -1110,8 +1104,7 @@ img {
   }
 }
 
-
-/* ---------------------------Explore Section CSS--------------------------- */
+/* ------------------------------------------Explore Section CSS------------------------------------------ */
 
 .page-content {
   display: flex;
@@ -1310,104 +1303,7 @@ img {
   }
 }
 
-/* ---------------------------Partners Section CSS--------------------------- */
-
-.partners .container {
-  height: fit-content;
-  width: 100%;
-  text-align: center;
-}
-
-.partners h2 {
-  margin-bottom: 0px;
-  padding: 0px;
-}
-
-.partners.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0px 20px;
-  height: fit-content;
-  margin: 2px 6px 2px 2px;
-}
-
-.partners.item {
-  height: 200px;
-  width: 30%;
-  padding: 0;
-  margin: auto;
-}
-
-.img_wraper {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
-}
-
-.partners.item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: 0.5s all;
-  z-index: 0;
-  padding: 4px;
-}
-
-.partners.item img:hover {
-  transform: scale(1.2, 1.2);
-}
-
-.partners.title {
-  color: black;
-  padding: 20px 0 0 0;
-  margin: 0;
-}
-
-@media (min-width: 600px) {
-  .partners.container {}
-
-  .partners.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 30px;
-  }
-}
-
-
-
-/* -------------------------- Scroll to Top ------------------------------ */
-
-.to-top {
-  background: #024063;
-  position: fixed;
-  bottom: 16px;
-  right: 32px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  color: #fff;
-  text-decoration: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .4s;
-  z-index: 10;
-}
-
-.to-top.active {
-  bottom: 32px;
-  pointer-events: auto;
-  opacity: 1;
-}
+/* ------------------------------------------------Mentors CSS-------------------------------------- */
 
 .container2.main {
   padding: 30px;
@@ -1530,125 +1426,7 @@ img {
   font-weight: bold;
 }
 
-
-/* ----------------------- Awaits Section ---------------------------------- */
-.container3 {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-#awaits .container3 .register-button {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-
-.awaits-section {
-  background-color: var(--bg-primary);
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.awaits-section h2 {
-  margin-bottom: 20px;
-}
-
-.awaits-section p {
-  font-size: 1.3rem;
-  text-align: center;
-  margin-top: 6px;
-  color: var(--text-blue);
-  font-weight: 500;
-}
-
-/* Grid Layout */
-.awaits-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-/* Style all cards */
-.awaits-grid>div {
-  flex: 1 1 calc(33.33% - 20px);
-  /* 3 per row minus gap */
-  max-width: calc(33.33% - 20px);
-  background: #fff;
-  padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  text-align: left;
-}
-
-/* Force only 2 items in second row by stretching last 2 cards */
-@media (min-width: 992px) {
-
-  .awaits-grid>div:nth-child(4),
-  .awaits-grid>div:nth-child(5) {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-
-/* Style all cards */
-.await-card {
-  background-color: #fff;
-  padding: 25px 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Card Text */
-.await-card p {
-  font-size: 1.2rem;
-  color: var(--text-medium);
-}
-
-.await-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px #023f635b;
-}
-
-/* Center bottom two cards */
-.await-card.bottom-row {
-  grid-column: 1 / span 3;
-  justify-self: center;
-}
-
-@media (max-width: 768px) {
-  .awaits-grid>div {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-
-/* Small Devices Single Cards */
-@media (max-width: 576px) {
-  .awaits-grid>div {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-/*--------------------Awaits Icon ------------------*/
-.icon-circle {
-  width: 60px;
-  height: 60px;
-  background-color: #024063;
-  color: var(--text-yellow);
-  font-size: 26px;
-  border-radius: 100px;
-  margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* ------------------- Princing Section ------------------ */
+/* ---------------------------------------- Princing Section ----------------------------------- */
 .pricing-section {
   padding: 20px 40px;
   background-color: var(--bg-primary);
@@ -1765,6 +1543,165 @@ img {
   flex-shrink: 0;
 }
 
+/* ---------------------------Partners Section CSS--------------------------- */
+
+.partners .container {
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+}
+
+.partners h2 {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.partners.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 20px;
+  height: fit-content;
+  margin: 2px 6px 2px 2px;
+}
+
+.partners.item {
+  height: 200px;
+  width: 30%;
+  padding: 0;
+  margin: auto;
+}
+
+.img_wraper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.partners.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.5s all;
+  z-index: 0;
+  padding: 4px;
+}
+
+.partners.item img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.partners.title {
+  color: black;
+  padding: 20px 0 0 0;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .partners.container {}
+
+  .partners.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px;
+  }
+}
+
+/* ---------------------------FAQ Css------------------------------ */
+
+#faq {
+  height: auto;
+  font-family: var(--font-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-medium);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.25);
+  margin: 10px auto;
+  width: 60vw;
+}
+
+.question {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-blue);
+}
+
+@media (max-width: 790px) {
+  .faq-container {
+    width: 80vw;
+  }
+}
+
+.question::after {
+  content: "\002B";
+  font-size: 2.2rem;
+  position: absolute;
+  right: 20px;
+  transition: 0.2s;
+}
+
+.question.active::after {
+  transform: rotate(45deg);
+}
+
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  color: #024063;
+
+}
+
+
+.answer {
+  padding: 0 20px 20px;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-medium);
+  font-style: italic;
+}
+
+
+@media screen and (max-width: 790px) {
+  html {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+}
+
 /*------ Copyright ----------- */
 .Copyright {
   text-align: center;
@@ -1779,4 +1716,33 @@ img {
   font-family: var(--font-primary);
   font-weight: 600;
   padding: 10px;
+}
+
+
+/* -------------------------- Scroll to Top ------------------------------ */
+
+.to-top {
+  background: #024063;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+  z-index: 10;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
