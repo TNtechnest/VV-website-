@@ -15,19 +15,12 @@ window.addEventListener("scroll", function () {
 window.addEventListener('scroll', function () {
         const header = document.getElementById('main-header');
         if (window.scrollY > 50) {
-            header.classList.remove('transparent');
             header.classList.add('scrolled');
         } else {
-            header.classList.add('transparent');
             header.classList.remove('scrolled');
         }
     });
 
-    // On page load, make sure the transparent class is applied
-    window.addEventListener('load', function () {
-        const header = document.getElementById('main-header');
-        header.classList.add('transparent');
-    });
 
 // ----------------------NavBar-------------------
 const toggleButton = document.getElementById('menu-toggle');
@@ -45,42 +38,26 @@ navLinks.forEach(link => {
   });
 });
 
+// --------------------Who's This Space for---------------------
+jQuery(document).ready(function($) {
 
-// -----------------Tagline ----------------------
-var taglines = (function () {
-    "use strict";
+  //Count nr. of square classes
+  var countSquare = $('.square').length;
 
-    function changeTaglines() {
-        var taglines = jQuery(".tagline"),
-            taglinesIndex = -1;
+  //For each Square found add BG image
+  for (i = 0; i < countSquare; i++) {
+    var firstImage = $('.square').eq([i]);
+    var secondImage = $('.square2').eq([i]);
 
-        function showNextTagline() {
-            ++taglinesIndex;
-            taglines.eq(taglinesIndex % taglines.length)
-                .fadeIn(1000)
-                .delay(6000)
-                .fadeOut(1000, showNextTagline);
-        }
+    var getImage = firstImage.attr('data-image');
+    var getImage2 = secondImage.attr('data-image');
 
-        showNextTagline();
-    }
-
-    return {
-        init: function () {
-            changeTaglines();
-        }
-    };
-
-}());
-
-jQuery(function () {
-    "use strict";
-    taglines.init();
+    firstImage.css('background-image', 'url(' + getImage + ')');
+    secondImage.css('background-image', 'url(' + getImage2 + ')');
+  }
 });
 
-
-
-// ---------------FAQ--------------
+// ---------------------FAQ----------------------------
 let question = document.querySelectorAll(".question");
 
 question.forEach(question => {
